@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "event_id": "1",
+      "type": "m.room.message",
+      "content": {
+        "body": "ab"
+      }
+    },
+    {
+      "event_id": "2",
+      "type": "m.room.message",
+      "content": {
+        "body": "ab b c de"
+      }
+    },
+    {
+      "event_id": "3",
+      "type": "m.room.message",
+      "content": {
+        "body": "abc def"
+      }
+    },
+    {
+      "event_id": "4",
+      "content": {},
+      "type": "m.room.message",
+      "unsigned": {
+        "redacted_by": "$event_id",
+        "redacted_because": {
+          "content": {
+            "reason": "sent accidentally"
+          },
+          "redacts": "$event_id"
+        }
+      }
+    },
+    {
+      "event_id": "5",
+      "type": "m.room.member",
+      "content": {
+        "displayname": "John Doe",
+        "membership": "join"
+      }
+    }
+  ],
+  "documents": {
+    "1": [
+      "ab"
+    ],
+    "2": [
+      "ab",
+      "b",
+      "c",
+      "de"
+    ],
+    "3": [
+      "abc",
+      "def"
+    ]
+  },
+  "keywords": [
+    "ab",
+    "b",
+    "c",
+    "de",
+    "abc",
+    "def"
+  ]
+}
