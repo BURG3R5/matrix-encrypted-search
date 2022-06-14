@@ -34,9 +34,11 @@ class EncryptedIndex:
         """
 
         documents: corpus_type = {}
+        keywords: Set[str] = set()
         for event in events:
-            if (event["type"] == "m.room.message" and "content" in event
-                    and "body" in event["content"]):
+            if event["type"] == "m.room.message" \
+                    and "content" in event \
+                    and "body" in event["content"]:
                 event_id: str = event["event_id"]
                 content: str = event["content"]["body"]
                 for punctuation in "!()-[]{};:, <>./?@#$%^&*_~'\"\\":
@@ -44,6 +46,6 @@ class EncryptedIndex:
                 content = content.lower()
                 tokens: Set[str] = (set(word_tokenize(content)) -
                                     set(stopwords.words("english")))
+                keywords |= tokens
                 documents[event_id] = tokens
-        keywords: Set[str] = set.union(*(documents.values()))
         return documents, keywords
