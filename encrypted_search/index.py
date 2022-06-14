@@ -3,7 +3,7 @@ from typing import List, Set, Tuple
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 
-from utils.types import corpus_type, event_type
+from utils.types import corpus_type, event_type, index_type
 
 
 class EncryptedIndex:
@@ -21,6 +21,7 @@ class EncryptedIndex:
 
     def __init__(self, events: List[event_type]):
         documents, keywords = self.parse(events)
+        inverted_index = self.invert(documents, keywords)
 
     @staticmethod
     def parse(events: List[event_type]) -> Tuple[corpus_type, Set[str]]:
@@ -49,3 +50,20 @@ class EncryptedIndex:
                 keywords |= tokens
                 documents[event_id] = tokens
         return documents, keywords
+
+    @staticmethod
+    def invert(documents: corpus_type, keywords: Set[str]) -> index_type:
+        """Converts a normalized corpus of documents into an inverted index.
+
+        Args:
+            documents: Mapping from document ids to the set of keywords present in each document
+            keywords: Set of all the normalized tokens present in the corpus
+
+        Returns:
+            An inverted index i.e. a mapping from keywords to documents that contain them.
+        """
+        inverted_index: index_type = {keyword: set() for keyword in keywords}
+        for doc_id, doc_content in documents.items():
+            for token in doc_content:
+                inverted_index[token].add(doc_id)
+        return inverted_index
