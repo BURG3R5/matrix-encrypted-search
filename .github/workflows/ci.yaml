@@ -29,4 +29,4 @@ jobs:
       - name: Download NLTK data
         run: python -m nltk.downloader punkt stopwords
       - name: Run tests
-        run: python -m unittest tests.encrypted_search_test
+        run: python -m unittest
