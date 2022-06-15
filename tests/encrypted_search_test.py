@@ -28,6 +28,27 @@ class EncryptedIndexTest(unittest.TestCase):
             self.assertEqual(documents, expected_documents)
             self.assertEqual(keywords, expected_keywords)
 
+    def test_invert(self):
+        cases = (
+            "basic",  # Trivial example
+            "real",  # Slightly more realistic example
+        )
+        for case_name in cases:
+            raw_test_data = get_test_data("index/invert", case_name)
+            documents = {
+                k: set(v)
+                for k, v in raw_test_data["documents"].items()
+            }
+            keywords = set(raw_test_data["keywords"])
+            expected_inverted_index = {
+                k: set(v)
+                for k, v in raw_test_data["inverted_index"].items()
+            }
+
+            inverted_index = EncryptedIndex.invert(documents, keywords)
+
+            self.assertEqual(inverted_index, expected_inverted_index)
+
 
 if __name__ == "__main__":
     unittest.main()
