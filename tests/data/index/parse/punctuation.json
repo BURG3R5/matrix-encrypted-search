@@ -20,6 +20,13 @@
       "content": {
         "body": "abc.def"
       }
+    },
+    {
+      "event_id": "4",
+      "type": "m.room.message",
+      "content": {
+        "body": "@alice:example.com helps @bob:matrix.org with testing in #gsoc:matrix.org"
+      }
     }
   ],
   "documents": {
@@ -30,11 +37,28 @@
       "ab",
       "b",
       "c",
-      "de"
+      "de",
+      "ab,b",
+      "c-'de"
     ],
     "3": [
       "abc",
-      "def"
+      "def",
+      "abc.def"
+    ],
+    "4": [
+      "alice",
+      "@alice:example.com",
+      "bob",
+      "@bob:matrix.org",
+      "com",
+      "example",
+      "gsoc",
+      "helps",
+      "matrix",
+      "org",
+      "#gsoc:matrix.org",
+      "testing"
     ]
   },
   "keywords": [
@@ -43,6 +67,21 @@
     "c",
     "de",
     "abc",
-    "def"
+    "def",
+    "ab,b",
+    "c-'de",
+    "abc.def",
+    "alice",
+    "@alice:example.com",
+    "bob",
+    "@bob:matrix.org",
+    "com",
+    "example",
+    "gsoc",
+    "helps",
+    "matrix",
+    "org",
+    "#gsoc:matrix.org",
+    "testing"
   ]
 }

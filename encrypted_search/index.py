@@ -1,8 +1,6 @@
 from typing import List, Set, Tuple
 
-from nltk import word_tokenize
-from nltk.corpus import stopwords
-
+from utils.normalizer import normalize
 from utils.types import corpus_type, event_type, index_type
 
 
@@ -42,11 +40,7 @@ class EncryptedIndex:
                     and "body" in event["content"]:
                 event_id: str = event["event_id"]
                 content: str = event["content"]["body"]
-                for punctuation in "!()-[]{};:, <>./?@#$%^&*_~'\"\\":
-                    content = content.replace(punctuation, " ")
-                content = content.lower()
-                tokens: Set[str] = (set(word_tokenize(content)) -
-                                    set(stopwords.words("english")))
+                tokens = normalize(content)
                 keywords |= tokens
                 documents[event_id] = tokens
         return documents, keywords
