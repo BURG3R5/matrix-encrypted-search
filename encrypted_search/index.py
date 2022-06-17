@@ -7,15 +7,15 @@ from utils.types import corpus_type, event_type, index_type
 
 
 class EncryptedIndex:
-    """A searchable obfuscated index.
+    """A searchable, structurally-encrypted index.
 
-    To prevent data leakage, we obfuscate a simple inverted index into two structures: a collection of arrays and a lookup table. This class sets up this scheme and exposes the data to be searched upon.
+    To prevent data leakage, we transform a simple inverted index into two structures: a collection of arrays and a lookup table. This class sets up this scheme and exposes the data to be searched upon.
 
     Args:
         events: List of Matrix room events to be indexed
 
     Attributes:
-        database: Three dimensional array containing document ids according to obfuscation scheme
+        database: Three dimensional array containing document ids according to the structuring scheme
         lookup_table: Map from a keyword to corresponding location in the database
     """
 
