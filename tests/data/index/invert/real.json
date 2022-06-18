@@ -1,0 +1,188 @@
+{
+  "documents": {
+    "1": [
+      "secure",
+      "matrix",
+      "network",
+      "communication",
+      "open",
+      "decentralized"
+    ],
+    "2": [
+      "apache",
+      "communication",
+      "decentralised",
+      "implementations",
+      "licensed",
+      "matrix",
+      "open",
+      "project",
+      "publishes",
+      "real",
+      "real-time",
+      "reference",
+      "secure",
+      "source",
+      "standard",
+      "time"
+    ],
+    "3": [
+      "aim",
+      "communication",
+      "create",
+      "evolving",
+      "foundation",
+      "independent",
+      "maintained",
+      "matrix",
+      "matrix.org",
+      "non",
+      "non-profit",
+      "open",
+      "org",
+      "platform",
+      "profit",
+      "vibrant",
+      "web"
+    ]
+  },
+  "keywords": [
+    "aim",
+    "apache",
+    "communication",
+    "create",
+    "decentralised",
+    "decentralized",
+    "evolving",
+    "foundation",
+    "implementations",
+    "independent",
+    "licensed",
+    "maintained",
+    "matrix",
+    "matrix.org",
+    "network",
+    "non",
+    "non-profit",
+    "open",
+    "org",
+    "platform",
+    "profit",
+    "project",
+    "publishes",
+    "real",
+    "real-time",
+    "reference",
+    "secure",
+    "source",
+    "standard",
+    "time",
+    "vibrant",
+    "web"
+  ],
+  "inverted_index": {
+    "aim": [
+      "3"
+    ],
+    "apache": [
+      "2"
+    ],
+    "communication": [
+      "2",
+      "1",
+      "3"
+    ],
+    "create": [
+      "3"
+    ],
+    "decentralised": [
+      "2"
+    ],
+    "decentralized": [
+      "1"
+    ],
+    "evolving": [
+      "3"
+    ],
+    "foundation": [
+      "3"
+    ],
+    "implementations": [
+      "2"
+    ],
+    "independent": [
+      "3"
+    ],
+    "licensed": [
+      "2"
+    ],
+    "maintained": [
+      "3"
+    ],
+    "matrix": [
+      "2",
+      "1",
+      "3"
+    ],
+    "matrix.org": [
+      "3"
+    ],
+    "network": [
+      "1"
+    ],
+    "non": [
+      "3"
+    ],
+    "non-profit": [
+      "3"
+    ],
+    "open": [
+      "2",
+      "1",
+      "3"
+    ],
+    "org": [
+      "3"
+    ],
+    "platform": [
+      "3"
+    ],
+    "profit": [
+      "3"
+    ],
+    "project": [
+      "2"
+    ],
+    "publishes": [
+      "2"
+    ],
+    "real": [
+      "2"
+    ],
+    "real-time": [
+      "2"
+    ],
+    "reference": [
+      "2"
+    ],
+    "secure": [
+      "2",
+      "1"
+    ],
+    "source": [
+      "2"
+    ],
+    "standard": [
+      "2"
+    ],
+    "time": [
+      "2"
+    ],
+    "vibrant": [
+      "3"
+    ],
+    "web": [
+      "3"
+    ]
+  }
+}

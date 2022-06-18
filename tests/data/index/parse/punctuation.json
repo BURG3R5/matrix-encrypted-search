@@ -1,0 +1,87 @@
+{
+  "events": [
+    {
+      "event_id": "1",
+      "type": "m.room.message",
+      "content": {
+        "body": "ab"
+      }
+    },
+    {
+      "event_id": "2",
+      "type": "m.room.message",
+      "content": {
+        "body": "ab,b c-'de"
+      }
+    },
+    {
+      "event_id": "3",
+      "type": "m.room.message",
+      "content": {
+        "body": "abc.def"
+      }
+    },
+    {
+      "event_id": "4",
+      "type": "m.room.message",
+      "content": {
+        "body": "@alice:example.com helps @bob:matrix.org with testing in #gsoc:matrix.org"
+      }
+    }
+  ],
+  "documents": {
+    "1": [
+      "ab"
+    ],
+    "2": [
+      "ab",
+      "b",
+      "c",
+      "de",
+      "ab,b",
+      "c-'de"
+    ],
+    "3": [
+      "abc",
+      "def",
+      "abc.def"
+    ],
+    "4": [
+      "alice",
+      "@alice:example.com",
+      "bob",
+      "@bob:matrix.org",
+      "com",
+      "example",
+      "gsoc",
+      "helps",
+      "matrix",
+      "org",
+      "#gsoc:matrix.org",
+      "testing"
+    ]
+  },
+  "keywords": [
+    "ab",
+    "b",
+    "c",
+    "de",
+    "abc",
+    "def",
+    "ab,b",
+    "c-'de",
+    "abc.def",
+    "alice",
+    "@alice:example.com",
+    "bob",
+    "@bob:matrix.org",
+    "com",
+    "example",
+    "gsoc",
+    "helps",
+    "matrix",
+    "org",
+    "#gsoc:matrix.org",
+    "testing"
+  ]
+}

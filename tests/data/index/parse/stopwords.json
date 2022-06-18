@@ -1,0 +1,106 @@
+{
+  "events": [
+    {
+      "event_id": "1",
+      "type": "m.room.message",
+      "content": {
+        "body": "Matrix is an open network for secure, decentralized communication"
+      }
+    },
+    {
+      "event_id": "2",
+      "type": "m.room.message",
+      "content": {
+        "body": "Matrix is an open source project that publishes the Matrix open standard for secure, decentralised, real-time communication, and its Apache licensed reference implementations."
+      }
+    },
+    {
+      "event_id": "3",
+      "type": "m.room.message",
+      "content": {
+        "body": "Maintained by the non-profit Matrix.org Foundation, we aim to create an open platform which is as independent, vibrant and evolving as the Web itself... but for communication."
+      }
+    }
+  ],
+  "documents": {
+    "1": [
+      "secure",
+      "matrix",
+      "network",
+      "communication",
+      "open",
+      "decentralized"
+    ],
+    "2": [
+      "apache",
+      "communication",
+      "decentralised",
+      "implementations",
+      "licensed",
+      "matrix",
+      "open",
+      "project",
+      "publishes",
+      "real",
+      "real-time",
+      "reference",
+      "secure",
+      "source",
+      "standard",
+      "time"
+    ],
+    "3": [
+      "aim",
+      "communication",
+      "create",
+      "evolving",
+      "foundation",
+      "independent",
+      "maintained",
+      "matrix",
+      "matrix.org",
+      "non",
+      "non-profit",
+      "open",
+      "org",
+      "platform",
+      "profit",
+      "vibrant",
+      "web"
+    ]
+  },
+  "keywords": [
+    "aim",
+    "apache",
+    "communication",
+    "create",
+    "decentralised",
+    "decentralized",
+    "evolving",
+    "foundation",
+    "implementations",
+    "independent",
+    "licensed",
+    "maintained",
+    "matrix",
+    "matrix.org",
+    "network",
+    "non",
+    "non-profit",
+    "open",
+    "org",
+    "platform",
+    "profit",
+    "project",
+    "publishes",
+    "real",
+    "real-time",
+    "reference",
+    "secure",
+    "source",
+    "standard",
+    "time",
+    "vibrant",
+    "web"
+  ]
+}
