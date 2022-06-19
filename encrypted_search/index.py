@@ -1,5 +1,7 @@
-from typing import List, Set, Tuple
+from math import ceil, log
+from typing import Dict, List, Set, Tuple
 
+from .models.level_info import LevelInfo
 from .utils.normalizer import normalize
 from .utils.types import corpus_type, event_type, index_type
 
@@ -12,14 +14,34 @@ class EncryptedIndex:
     Args:
         events: List of Matrix room events to be indexed
 
+    Keyword Args:
+        s: Int parameter that determines the space/read efficiency tradeoff
+        L: Int parameter that determines the locality
+
     Attributes:
         database: Three dimensional array containing document ids according to the structuring scheme
         lookup_table: Map from a keyword to corresponding location in the database
+
+        size: sum(len(inverted_index[w]): w∈keywords)
+        space_parameter: Int parameter that determines the space/read efficiency tradeoff
+        locality_parameter: Int parameter that determines the locality
     """
 
-    def __init__(self, events: List[event_type]):
+    space_parameter: int
+    locality_parameter: int
+    size: int
+
+    __levels: Dict[int, LevelInfo]
+
+    def __init__(self, events: List[event_type], **kwargs):
+        # Pre-setup
         documents, keywords = self.parse(events)
         inverted_index = self.invert(documents, keywords)
+
+        # Set parameters
+        self.space_parameter = kwargs.get('s', 2)
+        self.locality_parameter = kwargs.get('L', 1)
+        self.calculate_parameters(inverted_index)
 
     @staticmethod
     def parse(events: List[event_type]) -> Tuple[corpus_type, Set[str]]:
@@ -62,3 +84,25 @@ class EncryptedIndex:
             for token in doc_content:
                 inverted_index[token].add(doc_id)
         return inverted_index
+
+    def calculate_parameters(self, inverted_index: index_type) -> None:
+        """Calculates index-wide parameters and level-specific parameters based on s, L and the inverted index.
+
+        Args:
+            inverted_index: Mapping from keywords to documents that contain them
+        """
+
+        self.size = sum(len(arr) for arr in inverted_index.values())
+
+        # Determine populated levels
+        if self.size == 0:
+            self.__levels = {}
+            return
+        l0 = ceil(log(self.size, 2))
+        p = ceil(l0 / self.space_parameter)
+        level_indices = {l0 - i for i in range(0, p * self.space_parameter, p)}
+        if self.locality_parameter > 1:
+            level_indices.add(0)
+
+        # Determine parameters of various structures on each level
+        self.__levels = {l: LevelInfo(l, self.size) for l in level_indices}
