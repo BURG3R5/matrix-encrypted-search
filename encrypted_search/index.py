@@ -1,7 +1,7 @@
 from typing import List, Set, Tuple
 
-from utils.normalizer import normalize
-from utils.types import corpus_type, event_type, index_type
+from .utils.normalizer import normalize
+from .utils.types import corpus_type, event_type, index_type
 
 
 class EncryptedIndex:
@@ -56,6 +56,7 @@ class EncryptedIndex:
         Returns:
             An inverted index i.e. a mapping from keywords to documents that contain them.
         """
+
         inverted_index: index_type = {keyword: set() for keyword in keywords}
         for doc_id, doc_content in documents.items():
             for token in doc_content:

@@ -1,7 +1,8 @@
 import unittest
 
 from encrypted_search.index import EncryptedIndex
-from utils.test_helpers import get_test_data
+
+from .utils.test_helpers import get_test_data
 
 
 class EncryptedIndexTest(unittest.TestCase):
