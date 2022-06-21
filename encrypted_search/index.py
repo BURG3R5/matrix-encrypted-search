@@ -23,12 +23,12 @@ class EncryptedIndex:
         lookup_table: Map from a keyword to corresponding location in the database
 
         size: sum(len(inverted_index[w]): w∈keywords)
-        space_parameter: Int parameter that determines the space/read efficiency tradeoff
-        locality_parameter: Int parameter that determines the locality
+        s: Int parameter that determines the space/read efficiency tradeoff
+        L: Int parameter that determines the locality
     """
 
-    space_parameter: int
-    locality_parameter: int
+    s: int
+    L: int
     size: int
 
     __levels: Dict[int, LevelInfo]
@@ -39,8 +39,8 @@ class EncryptedIndex:
         inverted_index = self.invert(documents, keywords)
 
         # Set parameters
-        self.space_parameter = kwargs.get('s', 2)
-        self.locality_parameter = kwargs.get('L', 1)
+        self.s = kwargs.get('s', 2)
+        self.L = kwargs.get('L', 1)
         self.calculate_parameters(inverted_index)
 
     @staticmethod
@@ -99,9 +99,9 @@ class EncryptedIndex:
             self.__levels = {}
             return
         l0 = ceil(log(self.size, 2))
-        p = ceil(l0 / self.space_parameter)
-        level_indices = {l0 - i for i in range(0, p * self.space_parameter, p)}
-        if self.locality_parameter > 1:
+        p = ceil(l0 / self.s)
+        level_indices = {l0 - i for i in range(0, p * self.s, p)}
+        if self.L > 1:
             level_indices.add(0)
 
         # Determine parameters of various structures on each level
