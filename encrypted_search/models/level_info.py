@@ -23,7 +23,8 @@ class LevelInfo:
             self.array_size,
             self.large_bucket_size,
         )
-        self.number_of_buckets = self.number_of_large_buckets + self.small_bucket_size != 0
+        self.number_of_buckets = (self.number_of_large_buckets +
+                                  int(self.small_bucket_size != 0))
 
         # Chunks
         self.large_chunk_size = 2**level_index
