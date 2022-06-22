@@ -1,7 +1,9 @@
+from math import ceil, log
 from typing import List, Set, Tuple
 
-from utils.normalizer import normalize
-from utils.types import corpus_type, event_type, index_type
+from .models.level_info import LevelInfo
+from .utils.normalizer import normalize
+from .utils.types import corpus_type, event_type, index_type, levels_type
 
 
 class EncryptedIndex:
@@ -12,14 +14,34 @@ class EncryptedIndex:
     Args:
         events: List of Matrix room events to be indexed
 
+    Keyword Args:
+        s: Int parameter that determines the space/read efficiency tradeoff
+        L: Int parameter that determines the locality
+
     Attributes:
         database: Three dimensional array containing document ids according to the structuring scheme
         lookup_table: Map from a keyword to corresponding location in the database
+
+        size: sum(len(inverted_index[w]): w∈keywords)
+        s: Int parameter that determines the space/read efficiency tradeoff
+        L: Int parameter that determines the locality
     """
 
-    def __init__(self, events: List[event_type]):
+    s: int
+    L: int
+    size: int
+
+    __levels: levels_type
+
+    def __init__(self, events: List[event_type], **kwargs):
+        # Pre-setup
         documents, keywords = self.parse(events)
         inverted_index = self.invert(documents, keywords)
+
+        # Set parameters
+        self.s = kwargs.get('s', 2)
+        self.L = kwargs.get('L', 1)
+        self.__levels = self.calculate_parameters(inverted_index)
 
     @staticmethod
     def parse(events: List[event_type]) -> Tuple[corpus_type, Set[str]]:
@@ -56,8 +78,31 @@ class EncryptedIndex:
         Returns:
             An inverted index i.e. a mapping from keywords to documents that contain them.
         """
+
         inverted_index: index_type = {keyword: set() for keyword in keywords}
         for doc_id, doc_content in documents.items():
             for token in doc_content:
                 inverted_index[token].add(doc_id)
         return inverted_index
+
+    def calculate_parameters(self, inverted_index: index_type) -> levels_type:
+        """Calculates index-wide parameters and level-specific parameters based on s, L and the inverted index.
+
+        Args:
+            inverted_index: Mapping from keywords to documents that contain them
+        """
+
+        self.size = sum(len(arr) for arr in inverted_index.values())
+
+        # Determine populated levels
+        if self.size == 0:
+            return {}
+        l0 = ceil(log(self.size, 2))
+        p = ceil(l0 / self.s)
+        level_indices = {l0 - i for i in range(0, p * self.s, p)}
+        if self.L > 1:
+            level_indices.add(0)
+
+        # Determine parameters of various structures on each level
+        levels = {l: LevelInfo(l, self.size) for l in level_indices}
+        return levels

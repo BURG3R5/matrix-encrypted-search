@@ -1,7 +1,9 @@
 import unittest
 
 from encrypted_search.index import EncryptedIndex
-from utils.test_helpers import get_test_data
+
+from .utils.serializers import levels_to_json
+from .utils.test_helpers import get_test_data
 
 
 class EncryptedIndexTest(unittest.TestCase):
@@ -48,6 +50,29 @@ class EncryptedIndexTest(unittest.TestCase):
             inverted_index = EncryptedIndex.invert(documents, keywords)
 
             self.assertEqual(inverted_index, expected_inverted_index)
+
+    def test_calculate_parameters(self):
+        cases = (
+            "basic",  # Simple example
+            "real",  # Slightly more realistic example
+        )
+        for case_name in cases:
+            raw_test_data = get_test_data("index/calc_params", case_name)
+            expected_size = raw_test_data["size"]
+            inverted = {
+                k: set(v)
+                for k, v in raw_test_data["inverted_index"].items()
+            }
+            for s in range(1, 5):
+                for L in range(1, 3):
+                    expected_levels = raw_test_data[f"levels({s})({L})"]
+
+                    encrypted_index = EncryptedIndex([], s=s, L=L)
+                    levels = encrypted_index.calculate_parameters(inverted)
+                    serialized_levels = levels_to_json(levels)
+
+                    self.assertEqual(expected_size, encrypted_index.size)
+                    self.assertEqual(expected_levels, serialized_levels)
 
 
 if __name__ == "__main__":
