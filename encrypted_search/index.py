@@ -1,9 +1,9 @@
 from math import ceil, log
-from typing import Dict, List, Set, Tuple
+from typing import List, Set, Tuple
 
 from .models.level_info import LevelInfo
 from .utils.normalizer import normalize
-from .utils.types import corpus_type, event_type, index_type
+from .utils.types import corpus_type, event_type, index_type, levels_type
 
 
 class EncryptedIndex:
@@ -31,7 +31,7 @@ class EncryptedIndex:
     L: int
     size: int
 
-    __levels: Dict[int, LevelInfo]
+    __levels: levels_type
 
     def __init__(self, events: List[event_type], **kwargs):
         # Pre-setup
@@ -41,7 +41,7 @@ class EncryptedIndex:
         # Set parameters
         self.s = kwargs.get('s', 2)
         self.L = kwargs.get('L', 1)
-        self.calculate_parameters(inverted_index)
+        self.__levels = self.calculate_parameters(inverted_index)
 
     @staticmethod
     def parse(events: List[event_type]) -> Tuple[corpus_type, Set[str]]:
@@ -85,7 +85,7 @@ class EncryptedIndex:
                 inverted_index[token].add(doc_id)
         return inverted_index
 
-    def calculate_parameters(self, inverted_index: index_type) -> None:
+    def calculate_parameters(self, inverted_index: index_type) -> levels_type:
         """Calculates index-wide parameters and level-specific parameters based on s, L and the inverted index.
 
         Args:
@@ -96,8 +96,7 @@ class EncryptedIndex:
 
         # Determine populated levels
         if self.size == 0:
-            self.__levels = {}
-            return
+            return {}
         l0 = ceil(log(self.size, 2))
         p = ceil(l0 / self.s)
         level_indices = {l0 - i for i in range(0, p * self.s, p)}
@@ -105,4 +104,5 @@ class EncryptedIndex:
             level_indices.add(0)
 
         # Determine parameters of various structures on each level
-        self.__levels = {l: LevelInfo(l, self.size) for l in level_indices}
+        levels = {l: LevelInfo(l, self.size) for l in level_indices}
+        return levels
