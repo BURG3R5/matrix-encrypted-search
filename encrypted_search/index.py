@@ -21,11 +21,14 @@ class EncryptedIndex:
     Attributes:
         database: Three dimensional array containing document ids according to the structuring scheme
         lookup_table: Map from a keyword to corresponding location in the database
+        keywords: Set of all the normalized tokens present in the corpus
 
         size: sum(len(inverted_index[w]): w∈keywords)
         s: Int parameter that determines the space/read efficiency tradeoff
         L: Int parameter that determines the locality
     """
+
+    keywords: Set[str]
 
     s: int
     L: int
@@ -41,6 +44,7 @@ class EncryptedIndex:
         # Set parameters
         self.s = kwargs.get('s', 2)
         self.L = kwargs.get('L', 1)
+        self.keywords = keywords
         self.__levels = self.calculate_parameters(inverted_index)
 
     @staticmethod
