@@ -28,7 +28,7 @@ class EncryptedIndex:
         L: Int parameter that determines the locality
 
     Attributes:
-        datastore: Three dimensional array containing document ids according to the structuring scheme
+        datastore: Three dimensional array-like structure containing document ids according to the structuring scheme
         lookup_table: Map from a keyword to corresponding location in the datastore
         keywords: Set of all the normalized tokens present in the corpus
 
@@ -129,6 +129,11 @@ class EncryptedIndex:
         return levels
 
     def distribute(self, inverted_index: InvertedIndex) -> None:
+        """Fill the datastore and lookup_table with values from the inverted index according to the SSE scheme.
+
+        Args:
+            inverted_index: Mapping from keywords to documents that contain them
+        """
         # Initialize structures
         self.lookup_table = {keyword: [] for keyword in self.keywords}
         self.datastore = {
