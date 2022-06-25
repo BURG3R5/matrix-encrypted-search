@@ -68,7 +68,7 @@ class EncryptedIndexTest(unittest.TestCase):
                     expected_levels = raw_test_data[f"levels({s})({L})"]
 
                     encrypted_index = EncryptedIndex([], s=s, L=L)
-                    levels = encrypted_index.calculate_parameters(inverted)
+                    levels = encrypted_index.calc_params(inverted)
                     serialized_levels = levels_to_json(levels)
 
                     self.assertEqual(expected_size, encrypted_index.size)

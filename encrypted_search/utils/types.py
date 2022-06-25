@@ -1,10 +1,19 @@
-from typing import Any, Dict, List, Set, Tuple
+from typing import Any, Dict, List, NamedTuple, Set
 
 from ..models.level_info import LevelInfo
 
-event_type = Dict[str, Any]
-corpus_type = Dict[str, Set[str]]
-index_type = Dict[str, Set[str]]
-levels_type = Dict[int, LevelInfo]
-database_type = Dict[int, List[List[str]]]
-lookup_table_type = Dict[str, List[Tuple[int, int, int, int]]]
+Event = Dict[str, Any]
+Corpus = Dict[str, Set[str]]
+InvertedIndex = Dict[str, Set[str]]
+LevelInfos = Dict[int, LevelInfo]
+Datastore = Dict[int, List[List[str]]]
+Location = NamedTuple(
+    'Location',
+    [
+        ('level_index', int),
+        ('bucket_index', int),
+        ('start_of_chunk', int),
+        ('chunk_length', int),
+    ],
+)
+LookupTable = Dict[str, List[Location]]
