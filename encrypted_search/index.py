@@ -1,9 +1,17 @@
+import secrets
 from math import ceil, log
 from typing import List, Set, Tuple
 
 from .models.level_info import LevelInfo
 from .utils.normalizer import normalize
-from .utils.types import corpus_type, event_type, index_type, levels_type
+from .utils.types import (
+    corpus_type,
+    database_type,
+    event_type,
+    index_type,
+    levels_type,
+    lookup_table_type,
+)
 
 
 class EncryptedIndex:
@@ -28,6 +36,8 @@ class EncryptedIndex:
         L: Int parameter that determines the locality
     """
 
+    database: database_type
+    lookup_table: lookup_table_type
     keywords: Set[str]
 
     s: int
@@ -46,6 +56,9 @@ class EncryptedIndex:
         self.L = kwargs.get('L', 1)
         self.keywords = keywords
         self.__levels = self.calculate_parameters(inverted_index)
+
+        # Setup
+        self.distribute(inverted_index)
 
     @staticmethod
     def parse(events: List[event_type]) -> Tuple[corpus_type, Set[str]]:
@@ -110,3 +123,56 @@ class EncryptedIndex:
         # Determine parameters of various structures on each level
         levels = {l: LevelInfo(l, self.size) for l in level_indices}
         return levels
+
+    def distribute(self, inverted_index: index_type) -> None:
+        # Initialize structures
+        self.lookup_table = {keyword: [] for keyword in self.keywords}
+        self.database = {
+            level_index: [[] for _ in range(level.number_of_buckets)]
+            for level_index, level in self.__levels.items()
+        }
+
+        # Initialize helper
+        bucket_capacity = dict()
+        for i, l in self.__levels.items():
+            bucket_capacity[i] = [
+                l.large_bucket_size for _ in range(l.number_of_large_buckets)
+            ]
+            if l.small_bucket_size != 0:
+                bucket_capacity[i].append(l.small_bucket_size)
+
+        for keyword in self.keywords:
+            docs = list(inverted_index[keyword])
+            n = len(docs)
+
+            # Determine level
+            bound = log(n / self.L, 2)
+            level_index = min(l for l in self.__levels if l >= bound)
+            level = self.__levels[level_index]
+
+            # Divide into chunks
+            chunks = [
+                docs[i:i + level.large_chunk_size]
+                for i in range(0, len(docs), level.large_chunk_size)
+            ]
+            for chunk in chunks:
+                # Choose bucket
+                possible_buckets = [
+                    index for index, capacity in enumerate(
+                        bucket_capacity[level_index]) if capacity >= len(chunk)
+                ]
+                chosen_bucket = secrets.choice(possible_buckets)
+
+                # Update helper
+                current_length = len(self.database[level_index][chosen_bucket])
+                chunk_length = len(chunk)
+                bucket_capacity[level_index][chosen_bucket] -= chunk_length
+
+                # Append chunk
+                self.database[level_index][chosen_bucket] += chunk
+                self.lookup_table[keyword].append((
+                    level_index,
+                    chosen_bucket,
+                    current_length,
+                    chunk_length,
+                ))
