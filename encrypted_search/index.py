@@ -3,16 +3,9 @@ from math import ceil, log
 from typing import List, Set, Tuple
 
 from .models.level_info import LevelInfo
+from .models.location import Location
+from .types import Corpus, Datastore, Event, InvertedIndex, LevelInfos, LookupTable
 from .utils.normalizer import normalize
-from .utils.types import (
-    Corpus,
-    Datastore,
-    Event,
-    InvertedIndex,
-    LevelInfos,
-    Location,
-    LookupTable,
-)
 
 
 class EncryptedIndex:
@@ -181,8 +174,9 @@ class EncryptedIndex:
                 self.datastore[level_index][chosen_bucket] += chunk
                 self.lookup_table[keyword].append(
                     Location(
-                        level_index,
-                        chosen_bucket,
-                        prev_len,
-                        chunk_length,
+                        is_remote=False,
+                        level_index=level_index,
+                        bucket_index=chosen_bucket,
+                        start_of_chunk=prev_len,
+                        chunk_length=chunk_length,
                     ))

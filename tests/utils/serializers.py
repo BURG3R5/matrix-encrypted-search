@@ -1,7 +1,7 @@
 from typing import Any, Dict
 
 from encrypted_search.models.level_info import LevelInfo
-from encrypted_search.utils.types import LevelInfos
+from encrypted_search.types import LevelInfos
 
 
 def levels_to_json(levels: LevelInfos) -> Dict[str, Any]:

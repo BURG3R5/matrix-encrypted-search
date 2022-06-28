@@ -1,0 +1,2 @@
+class LocationFormatError(Exception):
+    pass
