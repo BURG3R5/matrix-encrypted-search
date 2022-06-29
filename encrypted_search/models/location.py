@@ -56,3 +56,22 @@ class Location:
                 raise LocationFormatError(
                     "Level or bucket index not provided for local datastore location"
                 )
+
+    def __eq__(self, other):
+        return (self.is_remote == other.is_remote
+                and self.level_index == other.level_index
+                and self.mxc_uri == other.mxc_uri
+                and self.bucket_index == other.bucket_index
+                and self.start_of_chunk == other.start_of_chunk
+                and self.chunk_length == other.chunk_length)
+
+    def __hash__(self):
+        t = (
+            self.is_remote,
+            self.level_index,
+            self.mxc_uri,
+            self.bucket_index,
+            self.start_of_chunk,
+            self.chunk_length,
+        )
+        return hash(t)
