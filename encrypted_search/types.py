@@ -3,9 +3,18 @@ from typing import Any, Dict, List, Set
 from .models.level_info import LevelInfo
 from .models.location import Location
 
+# index.parse
 Event = Dict[str, Any]
 Corpus = Dict[str, Set[str]]
+
+# index.invert
 InvertedIndex = Dict[str, Set[str]]
+
+# index.calc_params
 LevelInfos = Dict[int, LevelInfo]
-Datastore = Dict[int, List[List[str]]]
+
+# index.distribute
+Bucket = List[str]
+Level = List[Bucket]
+Datastore = Dict[int, Level]
 LookupTable = Dict[str, List[Location]]
