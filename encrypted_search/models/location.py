@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Any, Dict, Optional
 
 from ..exceptions import LocationFormatError
 
@@ -56,6 +56,26 @@ class Location:
                 raise LocationFormatError(
                     "Level or bucket index not provided for local datastore location"
                 )
+
+    @classmethod
+    def from_json(cls, json: Dict[str, Any]) -> "Location":
+        """Deserializes JSON into a `Location` object.
+
+        Args:
+            json: Serialized data in the form of a `dict`
+
+        Returns:
+            Deserialized `Location` object.
+        """
+
+        return cls(
+            is_remote="mxc_uri" in json,
+            mxc_uri=json.get("mxc_uri"),
+            level_index=json.get("level_index"),
+            bucket_index=json.get("bucket_index"),
+            start_of_chunk=json.get("start_of_chunk"),
+            chunk_length=json.get("chunk_length"),
+        )
 
     def __eq__(self, other):
         return (self.is_remote == other.is_remote

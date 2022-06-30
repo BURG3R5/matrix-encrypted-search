@@ -1,0 +1,333 @@
+{
+  "lookup_tables": [
+    {
+      "aim": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 2,
+          "chunk_length": 1
+        }
+      ],
+      "apache": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 3,
+          "chunk_length": 1
+        }
+      ],
+      "communication": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 4,
+          "chunk_length": 3
+        }
+      ],
+      "create": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "decentralised": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 2,
+          "chunk_length": 1
+        }
+      ],
+      "decentralized": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "evolving": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 5,
+          "chunk_length": 1
+        }
+      ],
+      "foundation": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ],
+      "implementations": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "independent": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "licensed": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 3,
+          "chunk_length": 1
+        }
+      ],
+      "maintained": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ],
+      "matrix": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 1,
+          "chunk_length": 3
+        }
+      ],
+      "matrix.org": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "network": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ],
+      "non": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "non-profit": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 3,
+          "chunk_length": 1
+        }
+      ],
+      "open": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 0,
+          "chunk_length": 3
+        }
+      ],
+      "org": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 10,
+          "chunk_length": 1
+        }
+      ],
+      "platform": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 6,
+          "chunk_length": 1
+        }
+      ],
+      "profit": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ],
+      "project": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 7,
+          "chunk_length": 1
+        }
+      ],
+      "publishes": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 9,
+          "chunk_length": 1
+        }
+      ],
+      "real": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ],
+      "real-time": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 5,
+          "chunk_length": 1
+        }
+      ],
+      "reference": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 2,
+          "chunk_length": 1
+        }
+      ],
+      "secure": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 2,
+          "chunk_length": 2
+        }
+      ],
+      "source": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "standard": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "time": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 3,
+          "chunk_length": 1
+        }
+      ],
+      "vibrant": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 8,
+          "chunk_length": 1
+        }
+      ],
+      "web": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ]
+    }
+  ],
+  "results": {
+    "aim": [
+      "https://example.com/file/level3-bucket4"
+    ],
+    "apache": [
+      "https://example.com/file/level3-bucket5"
+    ],
+    "communication": [
+      "https://example.com/file/level3-bucket3"
+    ],
+    "create": [
+      "https://example.com/file/level3-bucket1"
+    ],
+    "decentralised": [
+      "https://example.com/file/level3-bucket5"
+    ],
+    "decentralized": [
+      "https://example.com/file/level3-bucket5"
+    ],
+    "evolving": [
+      "https://example.com/file/level3-bucket1"
+    ],
+    "foundation": [
+      "https://example.com/file/level3-bucket1"
+    ],
+    "implementations": [
+      "https://example.com/file/level3-bucket4"
+    ],
+    "independent": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "licensed": [
+      "https://example.com/file/level3-bucket3"
+    ],
+    "maintained": [
+      "https://example.com/file/level3-bucket4"
+    ],
+    "matrix": [
+      "https://example.com/file/level3-bucket1"
+    ],
+    "matrix.org": [
+      "https://example.com/file/level3-bucket1",
+      "https://example.com/file/level3-bucket2"
+    ],
+    "network": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "non": [
+      "https://example.com/file/level3-bucket5"
+    ],
+    "non-profit": [
+      "https://example.com/file/level3-bucket0",
+      "https://example.com/file/level3-bucket4",
+      "https://example.com/file/level3-bucket5"
+    ],
+    "open": [
+      "https://example.com/file/level3-bucket0"
+    ],
+    "org": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "platform": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "profit": [
+      "https://example.com/file/level3-bucket0"
+    ],
+    "project": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "publishes": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "real": [
+      "https://example.com/file/level3-bucket5"
+    ],
+    "real-time": [
+      "https://example.com/file/level3-bucket0",
+      "https://example.com/file/level3-bucket2",
+      "https://example.com/file/level3-bucket5"
+    ],
+    "reference": [
+      "https://example.com/file/level3-bucket3"
+    ],
+    "secure": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "source": [
+      "https://example.com/file/level3-bucket3"
+    ],
+    "standard": [
+      "https://example.com/file/level3-bucket3"
+    ],
+    "time": [
+      "https://example.com/file/level3-bucket0"
+    ],
+    "vibrant": [
+      "https://example.com/file/level3-bucket2"
+    ],
+    "web": [
+      "https://example.com/file/level3-bucket4"
+    ]
+  }
+}

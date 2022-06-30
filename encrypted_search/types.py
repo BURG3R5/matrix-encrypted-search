@@ -1,4 +1,4 @@
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List, Set, Union
 
 from .models.level_info import LevelInfo
 from .models.location import Location
@@ -18,3 +18,6 @@ Bucket = List[str]
 Level = List[Bucket]
 Datastore = Dict[int, Level]
 LookupTable = Dict[str, List[Location]]
+
+# search.locate
+LookupResults = Dict[str, Union[Bucket, Level]]
