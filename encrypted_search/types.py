@@ -20,4 +20,4 @@ Datastore = Dict[int, Level]
 LookupTable = Dict[str, List[Location]]
 
 # search.locate
-LookupResults = Dict[str, Union[Bucket, Level]]
+FetchedFiles = Dict[str, Union[Bucket, Level]]

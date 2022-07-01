@@ -1,7 +1,7 @@
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Set, Tuple, cast
 
 from .models.location import Location
-from .types import LookupTable
+from .types import Bucket, FetchedFiles, Level, LookupTable
 from .utils.normalizer import normalize
 
 
@@ -11,7 +11,7 @@ class EncryptedSearch:
         A search is divided into three steps:
             1. Lookup: Find relevant locations in all lookup tables in the scope of this search.
             2. Fetch: Get relevant files from content repositories. Must be completed by external client.
-            3. Locate: Collect and shortlist event ids within fetched files.
+            3. Locate: Collect and shortlist doc ids within fetched files.
 
         Args:
             lookup_tables: Tuple of lookup tables that define the scope of the search
@@ -31,7 +31,6 @@ class EncryptedSearch:
 
     def __init__(self, lookup_tables: Tuple[LookupTable, ...]):
         self.__lookup_tables = lookup_tables
-        self.__locations = {}
 
     def lookup(self, query: str) -> Set[str]:
         """Finds relevant locations in all lookup tables and returns significant MXC URIs.
@@ -43,6 +42,7 @@ class EncryptedSearch:
             Set of MXC URIs pointing to files that contain the relevant locations.
         """
 
+        self.__locations = {}
         locations: List[Location] = []
         mxc_uris = set()
         tokens = normalize(query)
@@ -61,3 +61,28 @@ class EncryptedSearch:
                 self.__locations[location.mxc_uri] = [location]
 
         return mxc_uris
+
+    def locate(self, fetched_files: FetchedFiles) -> Set[str]:
+        """Finds relevant docs ids within fetched files.
+
+        Args:
+            fetched_files: Mapping from MXC URIs to file contents fetched from those URIs.
+
+        Returns:
+            Set of doc ids containing the tokens in the search query.
+        """
+
+        doc_ids = set()
+        for uri, file_data in fetched_files.items():
+            locations_in_this_file = self.__locations[uri]
+            for location in locations_in_this_file:
+                bucket: Bucket
+                if isinstance(file_data[0], str):
+                    bucket = cast(Bucket, file_data)
+                else:
+                    bucket = cast(Level, file_data)[location.bucket_index]
+                chunk = bucket[location.
+                               start_of_chunk:location.start_of_chunk +
+                               location.chunk_length]
+                doc_ids |= set(chunk)
+        return doc_ids
