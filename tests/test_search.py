@@ -35,6 +35,32 @@ class EncryptedSearchTest(unittest.TestCase):
 
             self.assertEqual(expected_results, results)
 
+    def test_locate(self):
+        # TODO: Add "mixed" test case, where files contain both buckets and levels.
+        cases = (
+            "single",  # Single index
+            "multiple",  # Multiple indices
+        )
+        for case_name in cases:
+            raw_test_data = get_test_data("search/locate", case_name)
+            for keyword, keyword_test_data in raw_test_data.items():
+                locations = {
+                    mxc_uri: [
+                        Location.from_json(serialized_location)
+                        for serialized_location in serialized_locations
+                    ]
+                    for mxc_uri, serialized_locations in
+                    keyword_test_data["locations"].items()
+                }
+                fetched_files = keyword_test_data["fetched_files"]
+                expected_doc_ids = keyword_test_data["doc_ids"]
+
+                search = EncryptedSearch(())
+                search._EncryptedSearch__locations = locations
+                doc_ids = search.locate(fetched_files)
+
+                self.assertEqual(set(expected_doc_ids), doc_ids)
+
 
 if __name__ == "__main__":
     unittest.main()
