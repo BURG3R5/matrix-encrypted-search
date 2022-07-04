@@ -1,0 +1,225 @@
+{
+  "events": [
+    {
+      "event_id": "1",
+      "type": "m.room.message",
+      "content": {
+        "body": "Matrix is an open network for secure, decentralized communication"
+      }
+    },
+    {
+      "event_id": "2",
+      "type": "m.room.message",
+      "content": {
+        "body": "Matrix is an open source project that publishes the Matrix open standard for secure, decentralised, real-time communication, and its Apache licensed reference implementations."
+      }
+    },
+    {
+      "event_id": "3",
+      "type": "m.room.message",
+      "content": {
+        "body": "Maintained by the non-profit Matrix.org Foundation, we aim to create an open platform which is as independent, vibrant and evolving as the Web itself... but for communication."
+      }
+    }
+  ],
+  "levels(1)(1)": {
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  },
+  "levels(1)(2)": {
+    "0": {
+      "array_size": 80,
+      "large_bucket_size": 2,
+      "large_chunk_size": 1,
+      "number_of_buckets": 40,
+      "number_of_large_buckets": 40,
+      "small_bucket_size": 0
+    },
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  },
+  "levels(2)(1)": {
+    "3": {
+      "array_size": 94,
+      "large_bucket_size": 16,
+      "large_chunk_size": 8,
+      "number_of_buckets": 6,
+      "number_of_large_buckets": 5,
+      "small_bucket_size": 14
+    },
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  },
+  "levels(2)(2)": {
+    "0": {
+      "array_size": 80,
+      "large_bucket_size": 2,
+      "large_chunk_size": 1,
+      "number_of_buckets": 40,
+      "number_of_large_buckets": 40,
+      "small_bucket_size": 0
+    },
+    "3": {
+      "array_size": 94,
+      "large_bucket_size": 16,
+      "large_chunk_size": 8,
+      "number_of_buckets": 6,
+      "number_of_large_buckets": 5,
+      "small_bucket_size": 14
+    },
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  },
+  "levels(3)(1)": {
+    "2": {
+      "array_size": 86,
+      "large_bucket_size": 8,
+      "large_chunk_size": 4,
+      "number_of_buckets": 11,
+      "number_of_large_buckets": 10,
+      "small_bucket_size": 6
+    },
+    "4": {
+      "array_size": 110,
+      "large_bucket_size": 32,
+      "large_chunk_size": 16,
+      "number_of_buckets": 4,
+      "number_of_large_buckets": 3,
+      "small_bucket_size": 14
+    },
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  },
+  "levels(3)(2)": {
+    "0": {
+      "array_size": 80,
+      "large_bucket_size": 2,
+      "large_chunk_size": 1,
+      "number_of_buckets": 40,
+      "number_of_large_buckets": 40,
+      "small_bucket_size": 0
+    },
+    "2": {
+      "array_size": 86,
+      "large_bucket_size": 8,
+      "large_chunk_size": 4,
+      "number_of_buckets": 11,
+      "number_of_large_buckets": 10,
+      "small_bucket_size": 6
+    },
+    "4": {
+      "array_size": 110,
+      "large_bucket_size": 32,
+      "large_chunk_size": 16,
+      "number_of_buckets": 4,
+      "number_of_large_buckets": 3,
+      "small_bucket_size": 14
+    },
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  },
+  "levels(4)(1)": {
+    "0": {
+      "array_size": 80,
+      "large_bucket_size": 2,
+      "large_chunk_size": 1,
+      "number_of_buckets": 40,
+      "number_of_large_buckets": 40,
+      "small_bucket_size": 0
+    },
+    "2": {
+      "array_size": 86,
+      "large_bucket_size": 8,
+      "large_chunk_size": 4,
+      "number_of_buckets": 11,
+      "number_of_large_buckets": 10,
+      "small_bucket_size": 6
+    },
+    "4": {
+      "array_size": 110,
+      "large_bucket_size": 32,
+      "large_chunk_size": 16,
+      "number_of_buckets": 4,
+      "number_of_large_buckets": 3,
+      "small_bucket_size": 14
+    },
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  },
+  "levels(4)(2)": {
+    "0": {
+      "array_size": 80,
+      "large_bucket_size": 2,
+      "large_chunk_size": 1,
+      "number_of_buckets": 40,
+      "number_of_large_buckets": 40,
+      "small_bucket_size": 0
+    },
+    "2": {
+      "array_size": 86,
+      "large_bucket_size": 8,
+      "large_chunk_size": 4,
+      "number_of_buckets": 11,
+      "number_of_large_buckets": 10,
+      "small_bucket_size": 6
+    },
+    "4": {
+      "array_size": 110,
+      "large_bucket_size": 32,
+      "large_chunk_size": 16,
+      "number_of_buckets": 4,
+      "number_of_large_buckets": 3,
+      "small_bucket_size": 14
+    },
+    "6": {
+      "array_size": 206,
+      "large_bucket_size": 128,
+      "large_chunk_size": 64,
+      "number_of_buckets": 2,
+      "number_of_large_buckets": 1,
+      "small_bucket_size": 78
+    }
+  }
+}

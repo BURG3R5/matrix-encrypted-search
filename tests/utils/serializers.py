@@ -1,10 +1,10 @@
 from typing import Any, Dict
 
 from encrypted_search.models.level_info import LevelInfo
-from encrypted_search.utils.types import levels_type
+from encrypted_search.utils.types import LevelInfos
 
 
-def levels_to_json(levels: levels_type) -> Dict[str, Any]:
+def levels_to_json(levels: LevelInfos) -> Dict[str, Any]:
     """Utility method to serialize a `dict` of `LevelInfo` objects.
 
     Args:

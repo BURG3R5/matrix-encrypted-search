@@ -39,4 +39,4 @@ def normalize(string: str) -> Set[str]:
     # Remove stopwords
     tokens -= set(stopwords.words("english"))
 
-    return tokens
+    return tokens - {''}
