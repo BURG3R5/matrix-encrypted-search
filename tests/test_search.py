@@ -37,6 +37,7 @@ class EncryptedSearchTest(unittest.TestCase):
 
     def test_locate(self):
         # TODO: Add "mixed" test case, where files contain both buckets and levels.
+        # TODO: Add "phrase" test case, where different events contain "A B", "A" and "B".
         cases = (
             "single",  # Single index
             "multiple",  # Multiple indices

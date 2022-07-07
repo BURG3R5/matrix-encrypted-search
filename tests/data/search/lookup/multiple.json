@@ -1967,8 +1967,7 @@
       "https://example.com/file/index1-level4-bucket10"
     ],
     "client-server": [
-      "https://example.com/file/index1-level4-bucket10",
-      "https://example.com/file/index1-level4-bucket14"
+      "https://example.com/file/index1-level4-bucket10"
     ],
     "clients": [
       "https://example.com/file/index1-level4-bucket4"
@@ -2054,13 +2053,10 @@
       "https://example.com/file/index1-level4-bucket2"
     ],
     "end-to-end": [
-      "https://example.com/file/index1-level4-bucket2",
       "https://example.com/file/index1-level4-bucket7"
     ],
     "end-user": [
-      "https://example.com/file/index1-level4-bucket16",
-      "https://example.com/file/index1-level4-bucket2",
-      "https://example.com/file/index1-level4-bucket13"
+      "https://example.com/file/index1-level4-bucket16"
     ],
     "etc": [
       "https://example.com/file/index1-level4-bucket10"
@@ -2069,9 +2065,7 @@
       "https://example.com/file/index1-level4-bucket1"
     ],
     "eventually-consistent": [
-      "https://example.com/file/index1-level4-bucket1",
-      "https://example.com/file/index1-level4-bucket17",
-      "https://example.com/file/index1-level4-bucket10"
+      "https://example.com/file/index1-level4-bucket17"
     ],
     "evolving": [
       "https://example.com/file/index0-level3-bucket3"
@@ -2231,10 +2225,7 @@
       "https://example.com/file/index1-level4-bucket3"
     ],
     "liberally-licensed": [
-      "https://example.com/file/index1-level4-bucket11",
-      "https://example.com/file/index1-level4-bucket5",
-      "https://example.com/file/index0-level3-bucket3",
-      "https://example.com/file/index1-level4-bucket3"
+      "https://example.com/file/index1-level4-bucket11"
     ],
     "licensed": [
       "https://example.com/file/index1-level4-bucket5",
@@ -2269,9 +2260,6 @@
       "https://example.com/file/index0-level3-bucket4"
     ],
     "matrix.org": [
-      "https://example.com/file/index1-level4-bucket12",
-      "https://example.com/file/index0-level3-bucket0",
-      "https://example.com/file/index0-level3-bucket4",
       "https://example.com/file/index0-level3-bucket2"
     ],
     "mediated": [
@@ -2309,9 +2297,7 @@
       "https://example.com/file/index0-level3-bucket4"
     ],
     "non-profit": [
-      "https://example.com/file/index0-level3-bucket1",
-      "https://example.com/file/index0-level3-bucket0",
-      "https://example.com/file/index0-level3-bucket4"
+      "https://example.com/file/index0-level3-bucket1"
     ],
     "numbers": [
       "https://example.com/file/index1-level4-bucket17"
@@ -2375,9 +2361,7 @@
       "https://example.com/file/index1-level4-bucket1"
     ],
     "power-level": [
-      "https://example.com/file/index1-level4-bucket1",
-      "https://example.com/file/index1-level4-bucket4",
-      "https://example.com/file/index1-level4-bucket7"
+      "https://example.com/file/index1-level4-bucket4"
     ],
     "pragmatic": [
       "https://example.com/file/index1-level4-bucket7"
@@ -2436,11 +2420,7 @@
     ],
     "real-time": [
       "https://example.com/file/index1-level4-bucket18",
-      "https://example.com/file/index0-level3-bucket1",
-      "https://example.com/file/index1-level4-bucket8",
-      "https://example.com/file/index1-level4-bucket13",
-      "https://example.com/file/index0-level3-bucket2",
-      "https://example.com/file/index0-level3-bucket5"
+      "https://example.com/file/index0-level3-bucket2"
     ],
     "receiving": [
       "https://example.com/file/index1-level4-bucket5"
@@ -2487,8 +2467,7 @@
       "https://example.com/file/index1-level4-bucket14"
     ],
     "server-server": [
-      "https://example.com/file/index1-level4-bucket8",
-      "https://example.com/file/index1-level4-bucket14"
+      "https://example.com/file/index1-level4-bucket8"
     ],
     "servers": [
       "https://example.com/file/index1-level4-bucket0"
@@ -2577,8 +2556,6 @@
       "https://example.com/file/index1-level4-bucket0"
     ],
     "third-party": [
-      "https://example.com/file/index1-level4-bucket13",
-      "https://example.com/file/index1-level4-bucket0",
       "https://example.com/file/index1-level4-bucket7"
     ],
     "time": [
@@ -2638,10 +2615,7 @@
       "https://example.com/file/index0-level3-bucket2"
     ],
     "web-friendly": [
-      "https://example.com/file/index1-level4-bucket16",
-      "https://example.com/file/index1-level4-bucket2",
-      "https://example.com/file/index1-level4-bucket6",
-      "https://example.com/file/index0-level3-bucket2"
+      "https://example.com/file/index1-level4-bucket6"
     ],
     "whilst": [
       "https://example.com/file/index1-level4-bucket8"

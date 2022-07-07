@@ -268,7 +268,6 @@
       "https://example.com/file/level3-bucket1"
     ],
     "matrix.org": [
-      "https://example.com/file/level3-bucket1",
       "https://example.com/file/level3-bucket2"
     ],
     "network": [
@@ -278,9 +277,7 @@
       "https://example.com/file/level3-bucket5"
     ],
     "non-profit": [
-      "https://example.com/file/level3-bucket0",
-      "https://example.com/file/level3-bucket4",
-      "https://example.com/file/level3-bucket5"
+      "https://example.com/file/level3-bucket4"
     ],
     "open": [
       "https://example.com/file/level3-bucket0"
@@ -304,9 +301,7 @@
       "https://example.com/file/level3-bucket5"
     ],
     "real-time": [
-      "https://example.com/file/level3-bucket0",
-      "https://example.com/file/level3-bucket2",
-      "https://example.com/file/level3-bucket5"
+      "https://example.com/file/level3-bucket2"
     ],
     "reference": [
       "https://example.com/file/level3-bucket3"
