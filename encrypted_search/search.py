@@ -2,7 +2,7 @@ from typing import Dict, List, Set, Tuple, cast
 
 from .models.location import Location
 from .types import Bucket, FetchedFiles, Level, LookupTable
-from .utils.normalizer import normalize
+from .utils.normalizer import normalize_surface
 
 
 class EncryptedSearch:
@@ -45,7 +45,7 @@ class EncryptedSearch:
         self.__locations = {}
         locations: List[Location] = []
         mxc_uris = set()
-        tokens = normalize(query)
+        tokens = normalize_surface(query)
 
         # Get locations
         for token in tokens:
