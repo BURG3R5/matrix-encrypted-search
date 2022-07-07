@@ -1,0 +1,818 @@
+{
+  "aim": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 10,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "apache": {
+    "locations": {
+      "https://example.com/file/level3-bucket3": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket3": [
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "communication": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 1,
+          "chunk_length": 3
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "create": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "decentralised": {
+    "locations": {
+      "https://example.com/file/level3-bucket4": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket4": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "decentralized": {
+    "locations": {
+      "https://example.com/file/level3-bucket2": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket2": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg"
+    ]
+  },
+  "evolving": {
+    "locations": {
+      "https://example.com/file/level3-bucket4": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 5,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket4": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "foundation": {
+    "locations": {
+      "https://example.com/file/level3-bucket3": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 2,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket3": [
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "implementations": {
+    "locations": {
+      "https://example.com/file/level3-bucket5": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 2,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket5": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "independent": {
+    "locations": {
+      "https://example.com/file/level3-bucket2": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket2": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "licensed": {
+    "locations": {
+      "https://example.com/file/level3-bucket1": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 7,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket1": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "maintained": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 8,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "matrix": {
+    "locations": {
+      "https://example.com/file/level3-bucket4": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 2,
+          "chunk_length": 3
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket4": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "matrix.org": {
+    "locations": {
+      "https://example.com/file/level3-bucket3": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket3": [
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "network": {
+    "locations": {
+      "https://example.com/file/level3-bucket1": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 6,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket1": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg"
+    ]
+  },
+  "non": {
+    "locations": {
+      "https://example.com/file/level3-bucket2": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 4,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket2": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "non-profit": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 9,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "open": {
+    "locations": {
+      "https://example.com/file/level3-bucket1": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 3,
+          "chunk_length": 3
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket1": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "org": {
+    "locations": {
+      "https://example.com/file/level3-bucket3": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket3": [
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "platform": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 7,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "profit": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 5,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "project": {
+    "locations": {
+      "https://example.com/file/level3-bucket2": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 5,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket2": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "publishes": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "real": {
+    "locations": {
+      "https://example.com/file/level3-bucket2": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 2,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket2": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "real-time": {
+    "locations": {
+      "https://example.com/file/level3-bucket1": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 2,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket1": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "reference": {
+    "locations": {
+      "https://example.com/file/level3-bucket5": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket5": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "secure": {
+    "locations": {
+      "https://example.com/file/level3-bucket1": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket1",
+          "start_of_chunk": 0,
+          "chunk_length": 2
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket1": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "source": {
+    "locations": {
+      "https://example.com/file/level3-bucket5": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket5",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket5": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "standard": {
+    "locations": {
+      "https://example.com/file/level3-bucket2": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket2",
+          "start_of_chunk": 3,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket2": [
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "time": {
+    "locations": {
+      "https://example.com/file/level3-bucket0": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket0",
+          "start_of_chunk": 6,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket0": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ]
+  },
+  "vibrant": {
+    "locations": {
+      "https://example.com/file/level3-bucket4": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket4",
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket4": [
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  },
+  "web": {
+    "locations": {
+      "https://example.com/file/level3-bucket3": [
+        {
+          "mxc_uri": "https://example.com/file/level3-bucket3",
+          "start_of_chunk": 3,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "fetched_files": {
+      "https://example.com/file/level3-bucket3": [
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+      ]
+    },
+    "doc_ids": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  }
+}
