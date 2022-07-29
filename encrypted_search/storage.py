@@ -4,6 +4,7 @@ from math import ceil
 from typing import IO, Callable, Dict, Tuple, Union
 
 from .index import EncryptedIndex
+from .models.location import Location
 from .types import (
     Bucket,
     Datastore,
@@ -15,12 +16,12 @@ from .types import (
     LargeBuckets,
     LargeLevels,
     Level,
+    LookupTable,
     WholeLevelFiles,
 )
 
 
 class IndexStorage:
-
     __cutoff_size: int
     __encrypted_index: EncryptedIndex
     __files: FilesMap
@@ -43,6 +44,90 @@ class IndexStorage:
             **fractions_of_level_files,
             **fractions_of_bucket_files
         }
+
+    def update_lookup_table(self):
+
+        def is_stored_as_level(level_index: int) -> bool:
+            return level_index in self.__mxc_uris_map
+
+        def is_stored_as_fraction_of_bucket(
+            level_index: int,
+            bucket_index: int,
+        ) -> bool:
+            return any(
+                True for identifier in self.__mxc_uris_map
+                if isinstance(identifier, tuple) and len(identifier) == 3 and
+                identifier[0] == level_index and identifier[1] == bucket_index)
+
+        def find_fraction_of_bucket_file(
+            level_index: int,
+            bucket_index: int,
+            start_of_chunk: int,
+        ) -> int:
+            identifiers = [
+                identifier[2] for identifier in self.__mxc_uris_map
+                if isinstance(identifier, tuple) and len(identifier) == 3 and
+                identifier[0] == level_index and identifier[1] == bucket_index
+            ]
+            closest_lowest = identifiers[0]
+            for identifier in identifiers:
+                if closest_lowest < identifier < start_of_chunk:
+                    closest_lowest = identifier
+            return closest_lowest
+
+        def find_fraction_of_level_file(
+            level_index: int,
+            bucket_index: int,
+        ) -> int:
+            identifiers = [
+                identifier[1] for identifier in self.__mxc_uris_map
+                if isinstance(identifier, tuple) and len(identifier) == 2
+                and identifier[0] == level_index
+            ]
+            closest_lowest = identifiers[0]
+            for identifier in identifiers:
+                if closest_lowest < identifier < bucket_index:
+                    closest_lowest = identifier
+            return closest_lowest
+
+        def convert_location(location: Location) -> Location:
+            l, b, s, c = location.level_index, location.bucket_index, location.start_of_chunk, location.chunk_length
+            new_location: Location
+            if is_stored_as_level(l):
+                new_location = Location(
+                    is_remote=True,
+                    mxc_uri=self.__mxc_uris_map[l],
+                    bucket_index=b,
+                    start_of_chunk=s,
+                    chunk_length=c,
+                )
+            elif is_stored_as_fraction_of_bucket(l, b):
+                prev_s = find_fraction_of_bucket_file(l, b, s)
+                new_location = Location(
+                    is_remote=True,
+                    mxc_uri=self.__mxc_uris_map[l, b, prev_s],
+                    start_of_chunk=s - prev_s,
+                    chunk_length=c,
+                )
+            else:
+                prev_b = find_fraction_of_level_file(l, b)
+                new_location = Location(
+                    is_remote=True,
+                    mxc_uri=self.__mxc_uris_map[l, prev_b],
+                    bucket_index=b - prev_b,
+                    start_of_chunk=s,
+                    chunk_length=c,
+                )
+            return new_location
+
+        new_lookup_table: LookupTable = {}
+        for keyword in self.__encrypted_index.keywords:
+            locations = self.__encrypted_index.lookup_table[keyword]
+            new_lookup_table[keyword] = [
+                convert_location(location) for location in locations
+            ]
+        print(new_lookup_table)
+        self.__encrypted_index.lookup_table = new_lookup_table
 
     def __segregate_levels(
         self,
