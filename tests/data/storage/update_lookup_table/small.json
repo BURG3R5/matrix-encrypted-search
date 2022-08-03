@@ -1,0 +1,1387 @@
+{
+  "encrypted_index": {
+    "lookup_table": {
+      "aim": [
+        {
+          "level_index": 0,
+          "bucket_index": 30,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "apache": [
+        {
+          "level_index": 0,
+          "bucket_index": 15,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "communication": [
+        {
+          "level_index": 2,
+          "bucket_index": 5,
+          "start_of_chunk": 0,
+          "chunk_length": 3
+        }
+      ],
+      "create": [
+        {
+          "level_index": 0,
+          "bucket_index": 18,
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "decentralised": [
+        {
+          "level_index": 0,
+          "bucket_index": 0,
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "decentralized": [
+        {
+          "level_index": 0,
+          "bucket_index": 7,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "evolving": [
+        {
+          "level_index": 0,
+          "bucket_index": 27,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "foundation": [
+        {
+          "level_index": 0,
+          "bucket_index": 29,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "implementations": [
+        {
+          "level_index": 0,
+          "bucket_index": 1,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "independent": [
+        {
+          "level_index": 0,
+          "bucket_index": 16,
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "licensed": [
+        {
+          "level_index": 0,
+          "bucket_index": 10,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "maintained": [
+        {
+          "level_index": 0,
+          "bucket_index": 24,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "matrix": [
+        {
+          "level_index": 2,
+          "bucket_index": 1,
+          "start_of_chunk": 0,
+          "chunk_length": 3
+        }
+      ],
+      "matrix.org": [
+        {
+          "level_index": 0,
+          "bucket_index": 11,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "network": [
+        {
+          "level_index": 0,
+          "bucket_index": 16,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "non": [
+        {
+          "level_index": 0,
+          "bucket_index": 0,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "non-profit": [
+        {
+          "level_index": 0,
+          "bucket_index": 32,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "open": [
+        {
+          "level_index": 2,
+          "bucket_index": 10,
+          "start_of_chunk": 0,
+          "chunk_length": 3
+        }
+      ],
+      "org": [
+        {
+          "level_index": 0,
+          "bucket_index": 5,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "platform": [
+        {
+          "level_index": 0,
+          "bucket_index": 13,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "profit": [
+        {
+          "level_index": 0,
+          "bucket_index": 12,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "project": [
+        {
+          "level_index": 0,
+          "bucket_index": 22,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "publishes": [
+        {
+          "level_index": 0,
+          "bucket_index": 39,
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "real": [
+        {
+          "level_index": 0,
+          "bucket_index": 9,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "real-time": [
+        {
+          "level_index": 0,
+          "bucket_index": 6,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "reference": [
+        {
+          "level_index": 0,
+          "bucket_index": 19,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "secure": [
+        {
+          "level_index": 0,
+          "bucket_index": 18,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        },
+        {
+          "level_index": 0,
+          "bucket_index": 39,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "source": [
+        {
+          "level_index": 0,
+          "bucket_index": 10,
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "standard": [
+        {
+          "level_index": 0,
+          "bucket_index": 14,
+          "start_of_chunk": 1,
+          "chunk_length": 1
+        }
+      ],
+      "time": [
+        {
+          "level_index": 0,
+          "bucket_index": 20,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "vibrant": [
+        {
+          "level_index": 0,
+          "bucket_index": 28,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ],
+      "web": [
+        {
+          "level_index": 0,
+          "bucket_index": 14,
+          "start_of_chunk": 0,
+          "chunk_length": 1
+        }
+      ]
+    },
+    "datastore": {
+      "0": [
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [],
+        [],
+        [],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [
+          "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg"
+        ],
+        [],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [
+          "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [],
+        [
+          "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [],
+        [],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ]
+      ],
+      "2": [
+        [],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+          "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [],
+        [],
+        [],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+          "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+          "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+          "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+        ]
+      ],
+      "4": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "6": [
+        [],
+        []
+      ]
+    },
+    "keywords": [
+      "reference",
+      "network",
+      "non",
+      "real",
+      "apache",
+      "independent",
+      "matrix",
+      "licensed",
+      "matrix.org",
+      "non-profit",
+      "implementations",
+      "decentralised",
+      "foundation",
+      "communication",
+      "project",
+      "platform",
+      "vibrant",
+      "secure",
+      "publishes",
+      "web",
+      "decentralized",
+      "time",
+      "source",
+      "org",
+      "standard",
+      "evolving",
+      "aim",
+      "profit",
+      "maintained",
+      "real-time",
+      "open",
+      "create"
+    ],
+    "s": 4,
+    "L": 2,
+    "size": 39
+  },
+  "100": {
+    "mxc_uris_map": {
+      "(2, 10, 2)": "file_uri/0",
+      "(2, 10, 0)": "file_uri/1",
+      "(2, 5, 2)": "file_uri/2",
+      "(2, 5, 0)": "file_uri/3",
+      "(2, 1, 2)": "file_uri/4",
+      "(2, 1, 0)": "file_uri/5",
+      "(2, 6)": "file_uri/6",
+      "(2, 2)": "file_uri/7",
+      "(2, 0)": "file_uri/8",
+      "(0, 39)": "file_uri/9",
+      "(0, 31)": "file_uri/10",
+      "(0, 29)": "file_uri/11",
+      "(0, 27)": "file_uri/12",
+      "(0, 24)": "file_uri/13",
+      "(0, 21)": "file_uri/14",
+      "(0, 19)": "file_uri/15",
+      "(0, 18)": "file_uri/16",
+      "(0, 17)": "file_uri/17",
+      "(0, 16)": "file_uri/18",
+      "(0, 15)": "file_uri/19",
+      "(0, 14)": "file_uri/20",
+      "(0, 13)": "file_uri/21",
+      "(0, 11)": "file_uri/22",
+      "(0, 10)": "file_uri/23",
+      "(0, 9)": "file_uri/24",
+      "(0, 7)": "file_uri/25",
+      "(0, 5)": "file_uri/26",
+      "(0, 1)": "file_uri/27",
+      "(0, 0)": "file_uri/28",
+      "6": "file_uri/29",
+      "4": "file_uri/30"
+    },
+    "final_lookup_table": {
+      "aim": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/11",
+          "start_of_chunk": 0
+        }
+      ],
+      "apache": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/19",
+          "start_of_chunk": 0
+        }
+      ],
+      "communication": [
+        {
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "create": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/16",
+          "start_of_chunk": 1
+        }
+      ],
+      "decentralised": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/28",
+          "start_of_chunk": 1
+        }
+      ],
+      "decentralized": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/25",
+          "start_of_chunk": 0
+        }
+      ],
+      "evolving": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/12",
+          "start_of_chunk": 0
+        }
+      ],
+      "foundation": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/11",
+          "start_of_chunk": 0
+        }
+      ],
+      "implementations": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/27",
+          "start_of_chunk": 0
+        }
+      ],
+      "independent": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/18",
+          "start_of_chunk": 1
+        }
+      ],
+      "licensed": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/23",
+          "start_of_chunk": 0
+        }
+      ],
+      "maintained": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/13",
+          "start_of_chunk": 0
+        }
+      ],
+      "matrix": [
+        {
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/5",
+          "start_of_chunk": 0
+        }
+      ],
+      "matrix.org": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/22",
+          "start_of_chunk": 0
+        }
+      ],
+      "network": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/18",
+          "start_of_chunk": 0
+        }
+      ],
+      "non": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/28",
+          "start_of_chunk": 0
+        }
+      ],
+      "non-profit": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/10",
+          "start_of_chunk": 0
+        }
+      ],
+      "open": [
+        {
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "org": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/26",
+          "start_of_chunk": 0
+        }
+      ],
+      "platform": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/21",
+          "start_of_chunk": 0
+        }
+      ],
+      "profit": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/22",
+          "start_of_chunk": 0
+        }
+      ],
+      "project": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/14",
+          "start_of_chunk": 0
+        }
+      ],
+      "publishes": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/9",
+          "start_of_chunk": 1
+        }
+      ],
+      "real": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/24",
+          "start_of_chunk": 0
+        }
+      ],
+      "real-time": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/26",
+          "start_of_chunk": 0
+        }
+      ],
+      "reference": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/15",
+          "start_of_chunk": 0
+        }
+      ],
+      "secure": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/16",
+          "start_of_chunk": 0
+        },
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/9",
+          "start_of_chunk": 0
+        }
+      ],
+      "source": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/23",
+          "start_of_chunk": 1
+        }
+      ],
+      "standard": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/20",
+          "start_of_chunk": 1
+        }
+      ],
+      "time": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/15",
+          "start_of_chunk": 0
+        }
+      ],
+      "vibrant": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/12",
+          "start_of_chunk": 0
+        }
+      ],
+      "web": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/20",
+          "start_of_chunk": 0
+        }
+      ]
+    }
+  },
+  "300": {
+    "mxc_uris_map": {
+      "(2, 10)": "file_uri/0",
+      "(2, 5)": "file_uri/1",
+      "(2, 0)": "file_uri/2",
+      "(0, 30)": "file_uri/3",
+      "(0, 21)": "file_uri/4",
+      "(0, 16)": "file_uri/5",
+      "(0, 12)": "file_uri/6",
+      "(0, 7)": "file_uri/7",
+      "(0, 0)": "file_uri/8",
+      "6": "file_uri/9",
+      "4": "file_uri/10"
+    },
+    "final_lookup_table": {
+      "aim": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "apache": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 0
+        }
+      ],
+      "communication": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "create": [
+        {
+          "bucket_index": 2,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/5",
+          "start_of_chunk": 1
+        }
+      ],
+      "decentralised": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/8",
+          "start_of_chunk": 1
+        }
+      ],
+      "decentralized": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/7",
+          "start_of_chunk": 0
+        }
+      ],
+      "evolving": [
+        {
+          "bucket_index": 6,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/4",
+          "start_of_chunk": 0
+        }
+      ],
+      "foundation": [
+        {
+          "bucket_index": 8,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/4",
+          "start_of_chunk": 0
+        }
+      ],
+      "implementations": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/8",
+          "start_of_chunk": 0
+        }
+      ],
+      "independent": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/5",
+          "start_of_chunk": 1
+        }
+      ],
+      "licensed": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/7",
+          "start_of_chunk": 0
+        }
+      ],
+      "maintained": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/4",
+          "start_of_chunk": 0
+        }
+      ],
+      "matrix": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        }
+      ],
+      "matrix.org": [
+        {
+          "bucket_index": 4,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/7",
+          "start_of_chunk": 0
+        }
+      ],
+      "network": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/5",
+          "start_of_chunk": 0
+        }
+      ],
+      "non": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/8",
+          "start_of_chunk": 0
+        }
+      ],
+      "non-profit": [
+        {
+          "bucket_index": 2,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "open": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/0",
+          "start_of_chunk": 0
+        }
+      ],
+      "org": [
+        {
+          "bucket_index": 5,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/8",
+          "start_of_chunk": 0
+        }
+      ],
+      "platform": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 0
+        }
+      ],
+      "profit": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 0
+        }
+      ],
+      "project": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/4",
+          "start_of_chunk": 0
+        }
+      ],
+      "publishes": [
+        {
+          "bucket_index": 9,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 1
+        }
+      ],
+      "real": [
+        {
+          "bucket_index": 2,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/7",
+          "start_of_chunk": 0
+        }
+      ],
+      "real-time": [
+        {
+          "bucket_index": 6,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/8",
+          "start_of_chunk": 0
+        }
+      ],
+      "reference": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/5",
+          "start_of_chunk": 0
+        }
+      ],
+      "secure": [
+        {
+          "bucket_index": 2,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/5",
+          "start_of_chunk": 0
+        },
+        {
+          "bucket_index": 9,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "source": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/7",
+          "start_of_chunk": 1
+        }
+      ],
+      "standard": [
+        {
+          "bucket_index": 2,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 1
+        }
+      ],
+      "time": [
+        {
+          "bucket_index": 4,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/5",
+          "start_of_chunk": 0
+        }
+      ],
+      "vibrant": [
+        {
+          "bucket_index": 7,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/4",
+          "start_of_chunk": 0
+        }
+      ],
+      "web": [
+        {
+          "bucket_index": 2,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 0
+        }
+      ]
+    }
+  },
+  "500": {
+    "mxc_uris_map": {
+      "(0, 39)": "file_uri/0",
+      "(0, 19)": "file_uri/1",
+      "(0, 11)": "file_uri/2",
+      "(0, 0)": "file_uri/3",
+      "6": "file_uri/4",
+      "4": "file_uri/5",
+      "2": "file_uri/6"
+    },
+    "final_lookup_table": {
+      "aim": [
+        {
+          "bucket_index": 11,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "apache": [
+        {
+          "bucket_index": 4,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        }
+      ],
+      "communication": [
+        {
+          "bucket_index": 5,
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 0
+        }
+      ],
+      "create": [
+        {
+          "bucket_index": 7,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 1
+        }
+      ],
+      "decentralised": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 1
+        }
+      ],
+      "decentralized": [
+        {
+          "bucket_index": 7,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "evolving": [
+        {
+          "bucket_index": 8,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "foundation": [
+        {
+          "bucket_index": 10,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "implementations": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "independent": [
+        {
+          "bucket_index": 5,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 1
+        }
+      ],
+      "licensed": [
+        {
+          "bucket_index": 10,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "maintained": [
+        {
+          "bucket_index": 5,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "matrix": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 0
+        }
+      ],
+      "matrix.org": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        }
+      ],
+      "network": [
+        {
+          "bucket_index": 5,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        }
+      ],
+      "non": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "non-profit": [
+        {
+          "bucket_index": 13,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "open": [
+        {
+          "bucket_index": 10,
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/6",
+          "start_of_chunk": 0
+        }
+      ],
+      "org": [
+        {
+          "bucket_index": 5,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "platform": [
+        {
+          "bucket_index": 2,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        }
+      ],
+      "profit": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        }
+      ],
+      "project": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "publishes": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/0",
+          "start_of_chunk": 1
+        }
+      ],
+      "real": [
+        {
+          "bucket_index": 9,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "real-time": [
+        {
+          "bucket_index": 6,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 0
+        }
+      ],
+      "reference": [
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "secure": [
+        {
+          "bucket_index": 7,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        },
+        {
+          "bucket_index": 0,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/0",
+          "start_of_chunk": 0
+        }
+      ],
+      "source": [
+        {
+          "bucket_index": 10,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/3",
+          "start_of_chunk": 1
+        }
+      ],
+      "standard": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 1
+        }
+      ],
+      "time": [
+        {
+          "bucket_index": 1,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "vibrant": [
+        {
+          "bucket_index": 9,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        }
+      ],
+      "web": [
+        {
+          "bucket_index": 3,
+          "chunk_length": 1,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
+        }
+      ]
+    }
+  }
+}

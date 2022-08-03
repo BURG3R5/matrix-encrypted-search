@@ -5,6 +5,7 @@ from encrypted_search.index import EncryptedIndex
 from encrypted_search.storage import IndexStorage
 
 from .utils.deserializers import index_from_json
+from .utils.serializers import lookup_table_to_json
 from .utils.test_helpers import get_test_data
 
 
@@ -155,6 +156,32 @@ class IndexSearchTest(unittest.TestCase):
                 self.assertEqual(expected_uris,
                                  storage._IndexStorage__mxc_uris_map)
                 self.assertEqual(expected_repository, repository)
+
+    def test_update_lookup_table(self):
+        cases = {
+            "small": (100, 300, 500),  # Small dataset
+            "large": (1000, 4000, 7000, 10000),  # Relatively large dataset
+        }
+        for case_name, cutoff_sizes in cases.items():
+            raw_test_data = get_test_data("storage/update_lookup_table",
+                                          case_name)
+            for cutoff_size in cutoff_sizes:
+                encrypted_index = index_from_json(
+                    raw_test_data["encrypted_index"])
+                mxc_uris_map = {
+                    ast.literal_eval(identifier): uri
+                    for identifier, uri in raw_test_data[str(cutoff_size)]
+                    ["mxc_uris_map"].items()
+                }
+                storage = IndexStorage(encrypted_index, cutoff_size)
+                storage._IndexStorage__mxc_uris_map = mxc_uris_map
+
+                storage.update_lookup_table()
+
+                self.assertEqual(
+                    raw_test_data[str(cutoff_size)]["final_lookup_table"],
+                    lookup_table_to_json(
+                        storage._IndexStorage__encrypted_index.lookup_table))
 
 
 if __name__ == "__main__":
