@@ -39,11 +39,6 @@ class Location:
                 To locate a remote datastore an MXC URI is necessary. To locate a local datastore, both level index and bucket index are necessary.
         """
 
-        self.is_remote = is_remote
-        self.bucket_index = kwargs.get("bucket_index")
-        self.start_of_chunk = int(kwargs.get("start_of_chunk"))
-        self.chunk_length = int(kwargs.get("chunk_length"))
-
         if is_remote:
             self.mxc_uri = kwargs.get("mxc_uri")
             if self.mxc_uri is None:
@@ -52,10 +47,17 @@ class Location:
                 )
         else:
             self.level_index = kwargs.get("level_index")
-            if self.level_index is None or self.bucket_index is None:
+            if self.level_index is None:
                 raise LocationFormatError(
                     "Level or bucket index not provided for local datastore location"
                 )
+
+        if "bucket_index" in kwargs and kwargs["bucket_index"] is not None:
+            self.bucket_index = int(kwargs["bucket_index"])
+
+        self.is_remote = is_remote
+        self.start_of_chunk = int(kwargs["start_of_chunk"])
+        self.chunk_length = int(kwargs["chunk_length"])
 
     @classmethod
     def from_json(cls, json: Dict[str, Any]) -> "Location":
@@ -76,6 +78,21 @@ class Location:
             start_of_chunk=json.get("start_of_chunk"),
             chunk_length=json.get("chunk_length"),
         )
+
+    def to_json(self) -> Dict[str, Any]:
+        """Serializes a `Location` object into a JSON.
+
+        Returns:
+            Serialized data in the form of a `dict`.
+        """
+
+        serialized = {"is_remote": self.is_remote}
+        optional_attributes = ("mxc_uri", "level_index", "bucket_index",
+                               "start_of_chunk", "chunk_length")
+        for attr in optional_attributes:
+            if hasattr(self, attr):
+                serialized[attr] = getattr(self, attr)
+        return serialized
 
     def __eq__(self, other):
         return (self.is_remote == other.is_remote

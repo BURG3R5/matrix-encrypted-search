@@ -176,31 +176,22 @@ class IndexStorage:
             bucket_index: int,
             start_of_chunk: int,
         ) -> int:
-            identifiers = [
+            closest_lowest = max(
                 identifier[2] for identifier in self.__mxc_uris_map
                 if isinstance(identifier, tuple) and len(identifier) == 3 and
                 identifier[0] == level_index and identifier[1] == bucket_index
-            ]
-            closest_lowest = identifiers[0]
-            for identifier in identifiers:
-                if closest_lowest < identifier < start_of_chunk:
-                    closest_lowest = identifier
+                and identifier[2] <= start_of_chunk)
             return closest_lowest
 
         def find_fraction_of_level_file(
             level_index: int,
             bucket_index: int,
         ) -> int:
-            identifiers = [
+            closest_lower = max(
                 identifier[1] for identifier in self.__mxc_uris_map
-                if isinstance(identifier, tuple) and len(identifier) == 2
-                and identifier[0] == level_index
-            ]
-            closest_lowest = identifiers[0]
-            for identifier in identifiers:
-                if closest_lowest < identifier < bucket_index:
-                    closest_lowest = identifier
-            return closest_lowest
+                if isinstance(identifier, tuple) and len(identifier) == 2 and
+                identifier[0] == level_index and identifier[1] <= bucket_index)
+            return closest_lower
 
         l, b, s, c = location.level_index, location.bucket_index, location.start_of_chunk, location.chunk_length
         new_location: Location
