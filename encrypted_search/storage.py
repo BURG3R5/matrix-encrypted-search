@@ -21,6 +21,20 @@ from .types import (
 
 
 class IndexStorage:
+    """A transformer class that exposes methods to store an index as a collection of MXC files.
+
+    Args:
+        encrypted_index: A structurally-encrypted searchable index.
+        cutoff_size: File size limit, in bytes.
+
+    Examples:
+        >>> encrypted_index = EncryptedIndex(events)
+        >>> storage = IndexStorage(encrypted_index, cutoff_size=5 * 1024)  # 5 MB file size limit
+        >>> for file_data, callback in storage:
+        >>>     mxc_uri = your_upload_method(file_data)
+        >>>     callback(mxc_uri)
+    """
+
     __cutoff_size: int
     __encrypted_index: EncryptedIndex
     __files: FilesMap
@@ -44,13 +58,33 @@ class IndexStorage:
             **fractions_of_bucket_files
         }
 
-    def update_lookup_table(self):
-        self.__encrypted_index.lookup_table = {
-            keyword:
-            [self.__convert_location(location) for location in locations]
-            for keyword, locations in
-            self.__encrypted_index.lookup_table.items()
-        }
+    def __next__(self) -> Tuple[FileData, Callable[[str], None]]:
+        """Provides next file to be uploaded.
+
+        Returns:
+            A tuple of the form (F, CB), where — F is the next file and CB is a callback function to update after
+        """
+        if not self.__remaining_files:
+            self.__update_lookup_table()
+            raise StopIteration
+
+        identifier, data = self.__remaining_files.popitem()
+
+        def callback(uri: str):
+            self.__mxc_uris_map[identifier] = uri
+
+        return data, callback
+
+    def __iter__(self) -> "IndexStorage":
+        """Initializes loop variables and returns iterator object
+
+        Called automatically by the `in` keyword when loop starts.
+
+        Returns:
+            The same object.
+        """
+        self.__remaining_files = self.__files.copy()
+        return self
 
     def __segregate_levels(
         self,
@@ -157,6 +191,18 @@ class IndexStorage:
 
         return files
 
+    def __update_lookup_table(self):
+        """Updates lookup table of encrypted index with new, remote locations.
+
+        Called by `__next__` when iteration ends and all files are uploaded.
+        """
+        self.__encrypted_index.lookup_table = {
+            keyword:
+            [self.__convert_location(location) for location in locations]
+            for keyword, locations in
+            self.__encrypted_index.lookup_table.items()
+        }
+
     def __convert_location(self, location: Location) -> Location:
 
         def is_stored_as_level(level_index: int) -> bool:
@@ -222,21 +268,6 @@ class IndexStorage:
             )
         return new_location
 
-    def __next__(self) -> Tuple[FileData, Callable[[str], None]]:
-        if not self.__remaining_files:
-            raise StopIteration
-
-        identifier, data = self.__remaining_files.popitem()
-
-        def callback(uri: str):
-            self.__mxc_uris_map[identifier] = uri
-
-        return data, callback
-
-    def __iter__(self):
-        self.__remaining_files = self.__files.copy()
-        return self
-
     @staticmethod
     def __estimate_json_size(data: Union[Bucket, Level]):
         fakefile = _FakeFile()
@@ -245,9 +276,20 @@ class IndexStorage:
 
 
 class _FakeFile(IO, ABC):
+    """
+    File-like class that stores only the size of the file written to it.
+
+    Args:
+        size: Initial size of file.
+    """
 
     def __init__(self, size=0):
         self.size = size
 
     def write(self, string):
+        """Records length of passed string and discards it.
+
+        Args:
+            string: String to be written to file.
+        """
         self.size += len(string)

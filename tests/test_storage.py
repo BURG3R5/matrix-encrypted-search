@@ -176,7 +176,7 @@ class IndexSearchTest(unittest.TestCase):
                 storage = IndexStorage(encrypted_index, cutoff_size)
                 storage._IndexStorage__mxc_uris_map = mxc_uris_map
 
-                storage.update_lookup_table()
+                storage._IndexStorage__update_lookup_table()
 
                 self.assertEqual(
                     raw_test_data[str(cutoff_size)]["final_lookup_table"],

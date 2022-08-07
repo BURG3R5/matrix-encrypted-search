@@ -5,6 +5,14 @@ from encrypted_search.models.location import Location
 
 
 def index_from_json(json: Dict[str, Any]) -> EncryptedIndex:
+    """Deserializes JSON map into an `EncryptedIndex` object.
+
+    Args:
+        json: Serialized data in the form of a `dict`
+
+    Returns:
+        Deserialized `EncryptedIndex` object.
+    """
     encrypted_index = EncryptedIndex([])
 
     encrypted_index.s = json["s"]
