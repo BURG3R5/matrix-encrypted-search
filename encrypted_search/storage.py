@@ -16,6 +16,7 @@ from .types import (
     LargeBuckets,
     LargeLevels,
     Level,
+    LookupTable,
     WholeLevelFiles,
 )
 
@@ -27,22 +28,27 @@ class IndexStorage:
         encrypted_index: A structurally-encrypted searchable index.
         cutoff_size: File size limit, in bytes.
 
+    Attributes:
+        lookup_table: Map from a keyword to corresponding location in a remote file.
+
     Examples:
         >>> encrypted_index = EncryptedIndex(events)
         >>> storage = IndexStorage(encrypted_index, cutoff_size=5 * 1024)  # 5 MB file size limit
         >>> for file_data, callback in storage:
         >>>     mxc_uri = your_upload_method(file_data)
         >>>     callback(mxc_uri)
+        >>> updated_lookup_table = storage.lookup_table
     """
 
+    lookup_table: LookupTable
+
     __cutoff_size: int
-    __encrypted_index: EncryptedIndex
     __files: FilesMap
     __remaining_files: FilesMap
     __mxc_uris_map: Dict[FileIdentifier, str]
 
     def __init__(self, encrypted_index: EncryptedIndex, cutoff_size: int):
-        self.__encrypted_index = encrypted_index
+        self.lookup_table = encrypted_index.lookup_table
         self.__cutoff_size = cutoff_size
         self.__mxc_uris_map = {}
 
@@ -196,11 +202,10 @@ class IndexStorage:
 
         Called by `__next__` when iteration ends and all files are uploaded.
         """
-        self.__encrypted_index.lookup_table = {
+        self.lookup_table = {
             keyword:
             [self.__convert_location(location) for location in locations]
-            for keyword, locations in
-            self.__encrypted_index.lookup_table.items()
+            for keyword, locations in self.lookup_table.items()
         }
 
     def __convert_location(self, location: Location) -> Location:

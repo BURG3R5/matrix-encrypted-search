@@ -8,23 +8,21 @@ from .utils.normalizer import normalize_surface
 class EncryptedSearch:
     """Representation of the scope in which encrypted searches can be executed.
 
-        A search is divided into three steps:
-            1. Lookup: Find relevant locations in all lookup tables in the scope of this search.
-            2. Fetch: Get relevant files from content repositories. Must be completed by external client.
-            3. Locate: Collect and shortlist doc ids within fetched files.
+    A search is divided into three steps:
+        1. Lookup: Find relevant locations in all lookup tables in the scope of this search.
+        2. Fetch: Get relevant files from content repositories. Must be completed by external client.
+        3. Locate: Collect and shortlist doc ids within fetched files.
 
-        Args:
-            lookup_tables: Tuple of lookup tables that define the scope of the search
+    Args:
+        lookup_tables: Tuple of lookup tables that define the scope of the search
 
-        Examples:
-            >>> index1 = EncryptedIndex([{"event": "data here"}])
-            >>> index2 = EncryptedIndex([{"other": "index"}])
-            >>> lookup_tables = (index1.lookup_table, index2.lookup_table)
-            >>> search = EncryptedSearch(lookup_tables)
-            >>> lookup_results = search.lookup("search query here")
-            >>> fetched_files = {uri: your_fetch_method(uri) for uri in lookup_results}
-            >>> event_ids = search.locate(fetched_files)
-        """
+    Examples:
+        >>> lookup_tables = (lookup_table1, lookup_table2, ...)
+        >>> search = EncryptedSearch(lookup_tables)
+        >>> lookup_results = search.lookup("search query here")
+        >>> fetched_files = {uri: your_fetch_method(uri) for uri in lookup_results}
+        >>> event_ids = search.locate(fetched_files)
+    """
 
     __locations: Dict[str, List[Location]]
     __lookup_tables: Tuple[LookupTable]

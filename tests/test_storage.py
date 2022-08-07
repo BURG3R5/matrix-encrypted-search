@@ -180,8 +180,8 @@ class IndexSearchTest(unittest.TestCase):
 
                 self.assertEqual(
                     raw_test_data[str(cutoff_size)]["final_lookup_table"],
-                    lookup_table_to_json(
-                        storage._IndexStorage__encrypted_index.lookup_table))
+                    lookup_table_to_json(storage.lookup_table),
+                )
 
 
 if __name__ == "__main__":
