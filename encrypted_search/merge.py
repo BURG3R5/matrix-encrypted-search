@@ -34,16 +34,24 @@ class IndexMerge:
     __remaining_keywords: Set[str]
 
     def __init__(self, lookup_tables: Tuple[LookupTable, ...], **kwargs):
-        self.__keywords = set.union(*(set(lt.keys()) for lt in lookup_tables))
         self.__lookup_tables = lookup_tables
 
-        # Semi-initialize the final encrypted index.
+        # Extract a common set of keywords
+        self.__keywords = set.union(*(set(lt.keys()) for lt in lookup_tables))
+
+        # Semi-initialize the final encrypted index
         self.encrypted_index = EncryptedIndex([],
                                               s=kwargs.get('s', 2),
                                               L=kwargs.get('L', 1))
         self.encrypted_index.keywords = self.__keywords
 
     def __next__(self) -> Tuple[Set[str], Callable[[str, FileData], None]]:
+        """Provides the next set of MXC URIs to fetch in order to merge indices.
+
+        Returns:
+            A tuple of the form (U, CB), where — U is a set of MXC URIs to fetch and CB is a callback function to update after each fetch operation.
+        """
+
         if not self.__remaining_keywords:
             self.__distribute_index()
             raise StopIteration
@@ -60,6 +68,13 @@ class IndexMerge:
 
         # Callback to be called after data is fetched from the homeserver.
         def callback(mxc_uri: str, file_data: FileData):
+            """Callback to update merged index with data fetched from `mxc_uri`.
+
+            Args:
+                mxc_uri: URI which was fetched from.
+                file_data: Bucket/Level-like object found at the URI.
+            """
+
             # Get all locations associated with current uri
             current_locations = locations[mxc_uri]
 
@@ -82,7 +97,7 @@ class IndexMerge:
         return set(locations.keys()), callback
 
     def __iter__(self) -> "IndexMerge":
-        """Initializes loop variables and returns iterator object
+        """Initializes loop variables and returns iterator object.
 
         Called automatically by the `in` keyword when loop starts.
 
@@ -95,6 +110,8 @@ class IndexMerge:
         return self
 
     def __distribute_index(self):
+        """Converts merged inverted index into encrypted index."""
+
         self.encrypted_index._EncryptedIndex__levels = self.encrypted_index.calc_params(
             self.__inverted_index)
         self.encrypted_index.distribute(self.__inverted_index)
