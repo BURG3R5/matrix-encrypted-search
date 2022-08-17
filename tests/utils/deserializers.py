@@ -2,6 +2,7 @@ from typing import Any, Dict
 
 from encrypted_search.index import EncryptedIndex
 from encrypted_search.models.location import Location
+from encrypted_search.types import LookupTable
 
 
 def index_from_json(json: Dict[str, Any]) -> EncryptedIndex:
@@ -32,3 +33,19 @@ def index_from_json(json: Dict[str, Any]) -> EncryptedIndex:
     }
 
     return encrypted_index
+
+
+def lookup_table_from_json(json: Dict[str, Any]) -> LookupTable:
+    """Deserializes JSON map into an `LookupTable`.
+
+    Args:
+        json: Serialized data in the form of a `dict`
+
+    Returns:
+        Deserialized `LookupTable`.
+    """
+
+    return {
+        keyword: [Location.from_json(location) for location in locations]
+        for keyword, locations in json.items()
+    }

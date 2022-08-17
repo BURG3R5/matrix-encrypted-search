@@ -39,7 +39,8 @@ class IndexMerge:
         # Extract a common set of keywords
         self.__keywords = set.union(*(set(lt.keys()) for lt in lookup_tables))
 
-        # Semi-initialize the final encrypted index
+        # Semi-initialize the final index
+        self.__inverted_index = {keyword: set() for keyword in self.__keywords}
         self.encrypted_index = EncryptedIndex([],
                                               s=kwargs.get('s', 2),
                                               L=kwargs.get('L', 1))
@@ -105,12 +106,14 @@ class IndexMerge:
             The same object.
         """
 
-        self.__inverted_index = {}
         self.__remaining_keywords = self.__keywords.copy()
         return self
 
     def __distribute_index(self):
-        """Converts merged inverted index into encrypted index."""
+        """Converts merged inverted index into encrypted index.
+
+        Called by `__next__` when iteration ends and all docs are merged.
+        """
 
         self.encrypted_index._EncryptedIndex__levels = self.encrypted_index.calc_params(
             self.__inverted_index)
