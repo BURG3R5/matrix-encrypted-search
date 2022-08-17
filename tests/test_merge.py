@@ -24,7 +24,6 @@ class IndexMergeTest(unittest.TestCase):
                              index_merge._IndexMerge__keywords)
 
     def test_iterator(self):
-        self.maxDiff = None
         cases = (
             "small",  # Small dataset
             "large",  # Relatively large dataset
