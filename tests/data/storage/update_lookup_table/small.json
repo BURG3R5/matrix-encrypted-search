@@ -329,6 +329,12 @@
           "is_remote": true,
           "mxc_uri": "file_uri/3",
           "start_of_chunk": 0
+        },
+        {
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/2",
+          "start_of_chunk": 0
         }
       ],
       "create": [
@@ -418,6 +424,12 @@
           "is_remote": true,
           "mxc_uri": "file_uri/5",
           "start_of_chunk": 0
+        },
+        {
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/4",
+          "start_of_chunk": 0
         }
       ],
       "matrix.org": [
@@ -461,6 +473,12 @@
           "chunk_length": 3,
           "is_remote": true,
           "mxc_uri": "file_uri/1",
+          "start_of_chunk": 0
+        },
+        {
+          "chunk_length": 3,
+          "is_remote": true,
+          "mxc_uri": "file_uri/0",
           "start_of_chunk": 0
         }
       ],

@@ -1,7 +1,7 @@
 import json
 from abc import ABC
 from math import ceil
-from typing import IO, Callable, Dict, Tuple, Union
+from typing import IO, Callable, Dict, List, Tuple, Union
 
 from .index import EncryptedIndex
 from .models.location import Location
@@ -202,13 +202,21 @@ class IndexStorage:
 
         Called by `__next__` when iteration ends and all files are uploaded.
         """
-        self.lookup_table = {
-            keyword:
-            [self.__convert_location(location) for location in locations]
-            for keyword, locations in self.lookup_table.items()
+        new_lookup_table: LookupTable = {
+            keyword: []
+            for keyword in self.lookup_table
         }
+        for keyword, locations in self.lookup_table.items():
+            for location in locations:
+                converted = self.__convert_location(location)
+                if isinstance(converted, tuple):
+                    new_lookup_table[keyword].extend(converted)
+                else:
+                    new_lookup_table[keyword].append(converted)
+        self.lookup_table = new_lookup_table
 
-    def __convert_location(self, location: Location) -> Location:
+    def __convert_location(
+            self, location: Location) -> Union[Location, Tuple[Location, ...]]:
 
         def is_stored_as_level(level_index: int) -> bool:
             return level_index in self.__mxc_uris_map
@@ -225,14 +233,11 @@ class IndexStorage:
         def find_fraction_of_bucket_file(
             level_index: int,
             bucket_index: int,
-            start_of_chunk: int,
-        ) -> int:
-            closest_lowest = max(
+        ) -> List[int]:
+            return sorted(
                 identifier[2] for identifier in self.__mxc_uris_map
                 if isinstance(identifier, tuple) and len(identifier) == 3 and
-                identifier[0] == level_index and identifier[1] == bucket_index
-                and identifier[2] <= start_of_chunk)
-            return closest_lowest
+                identifier[0] == level_index and identifier[1] == bucket_index)
 
         def find_fraction_of_level_file(
             level_index: int,
@@ -247,7 +252,7 @@ class IndexStorage:
         l, b, s, c = location.level_index, location.bucket_index, location.start_of_chunk, location.chunk_length
         new_location: Location
         if is_stored_as_level(l):
-            new_location = Location(
+            return Location(
                 is_remote=True,
                 mxc_uri=self.__mxc_uris_map[l],
                 bucket_index=b,
@@ -255,23 +260,36 @@ class IndexStorage:
                 chunk_length=c,
             )
         elif is_stored_as_fraction_of_bucket(l, b):
-            prev_s = find_fraction_of_bucket_file(l, b, s)
-            new_location = Location(
-                is_remote=True,
-                mxc_uri=self.__mxc_uris_map[l, b, prev_s],
-                start_of_chunk=s - prev_s,
-                chunk_length=c,
-            )
+            # Find all fractions of that bucket
+            starts_of_files = find_fraction_of_bucket_file(l, b)
+            first_fraction = next(
+                i for i in range(len(starts_of_files) - 1)
+                if s in range(starts_of_files[i], starts_of_files[i + 1]))
+            last_fraction = next((f for f in starts_of_files if f >= s + c),
+                                 starts_of_files[-1])
+            starts_of_files = starts_of_files[first_fraction:last_fraction]
+
+            # Modify relevant locations of fractions.
+            locations: List[Location] = []
+            for start_of_file in starts_of_files:
+                locations.append(
+                    Location(
+                        is_remote=True,
+                        mxc_uri=self.__mxc_uris_map[l, b, start_of_file],
+                        start_of_chunk=max(s - start_of_file, 0),
+                        chunk_length=c,
+                    ))
+
+            return tuple(locations)
         else:
             prev_b = find_fraction_of_level_file(l, b)
-            new_location = Location(
+            return Location(
                 is_remote=True,
                 mxc_uri=self.__mxc_uris_map[l, prev_b],
                 bucket_index=b - prev_b,
                 start_of_chunk=s,
                 chunk_length=c,
             )
-        return new_location
 
     @staticmethod
     def __estimate_json_size(data: Union[Bucket, Level]):
