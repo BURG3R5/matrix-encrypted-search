@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import Callable, Dict, List, Set, Tuple
+from typing import Callable, Dict, Iterable, List, Set, Tuple
 
 from encrypted_search.index import EncryptedIndex
 from encrypted_search.models.location import Location
@@ -30,10 +30,10 @@ class IndexMerge:
 
     __inverted_index: InvertedIndex
     __keywords: Set[str]
-    __lookup_tables: Tuple[LookupTable, ...]
+    __lookup_tables: Iterable[LookupTable]
     __remaining_keywords: Set[str]
 
-    def __init__(self, lookup_tables: Tuple[LookupTable, ...], **kwargs):
+    def __init__(self, lookup_tables: Iterable[LookupTable], **kwargs):
         self.__lookup_tables = lookup_tables
 
         # Extract a common set of keywords
