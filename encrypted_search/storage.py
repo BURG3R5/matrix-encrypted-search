@@ -260,10 +260,14 @@ class IndexStorage:
             # Find all fractions of that bucket
             starts_of_files = find_fraction_of_bucket_file(l, b)
             first_fraction = next(
-                i for i in range(len(starts_of_files) - 1)
-                if s in range(starts_of_files[i], starts_of_files[i + 1]))
-            last_fraction = next((f for f in starts_of_files if f >= s + c),
-                                 starts_of_files[-1])
+                (i for i in range(len(starts_of_files) - 1)
+                 if starts_of_files[i] <= s < starts_of_files[i + 1]),
+                starts_of_files[-1],
+            )
+            last_fraction = next(
+                (i for i, f in enumerate(starts_of_files) if f >= s + c),
+                starts_of_files[-1],
+            )
             starts_of_files = starts_of_files[first_fraction:last_fraction]
 
             # Modify relevant locations of fractions.
