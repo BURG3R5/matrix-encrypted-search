@@ -259,26 +259,30 @@ class IndexStorage:
         elif is_stored_as_fraction_of_bucket(l, b):
             # Find all fractions of that bucket
             starts_of_files = find_fraction_of_bucket_file(l, b)
-            first_fraction = next(
-                (i for i in range(len(starts_of_files) - 1)
-                 if starts_of_files[i] <= s < starts_of_files[i + 1]),
-                starts_of_files[-1],
-            )
-            last_fraction = next(
-                (i for i, f in enumerate(starts_of_files) if f >= s + c),
-                starts_of_files[-1],
-            )
-            starts_of_files = starts_of_files[first_fraction:last_fraction]
+            if s >= starts_of_files[-1]:
+                starts_of_files = [starts_of_files[-1]]
+            else:
+                first_fraction = next(
+                    (i for i in range(len(starts_of_files) - 1)
+                     if starts_of_files[i] <= s < starts_of_files[i + 1]),
+                    starts_of_files[-1],
+                )
+                last_fraction = next(
+                    (i for i, f in enumerate(starts_of_files) if f >= s + c),
+                    starts_of_files[-1],
+                )
+                starts_of_files = starts_of_files[first_fraction:last_fraction]
 
             # Modify relevant locations of fractions.
             locations: List[Location] = []
             for start_of_file in starts_of_files:
+                length_covered_so_far = max(start_of_file - s, 0)
                 locations.append(
                     Location(
                         is_remote=True,
                         mxc_uri=self.__mxc_uris_map[l, b, start_of_file],
                         start_of_chunk=max(s - start_of_file, 0),
-                        chunk_length=c,
+                        chunk_length=c - length_covered_so_far,
                     ))
 
             return tuple(locations)
