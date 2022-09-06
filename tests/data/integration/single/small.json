@@ -1,0 +1,130 @@
+{
+  "events": [
+    {
+      "event_id": "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "type": "m.room.message",
+      "content": {
+        "body": "Matrix is an open network for secure, decentralized communication"
+      }
+    },
+    {
+      "event_id": "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "type": "m.room.message",
+      "content": {
+        "body": "Matrix is an open source project that publishes the Matrix open standard for secure, decentralised, real-time communication, and its Apache licensed reference implementations."
+      }
+    },
+    {
+      "event_id": "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "type": "m.room.message",
+      "content": {
+        "body": "Maintained by the non-profit Matrix.org Foundation, we aim to create an open platform which is as independent, vibrant and evolving as the Web itself... but for communication."
+      }
+    }
+  ],
+  "search_results": {
+    "aim": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "apache": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "communication": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "create": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "decentralised": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "decentralized": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg"
+    ],
+    "evolving": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "foundation": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "implementations": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "independent": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "licensed": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "maintained": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "matrix": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "matrix.org": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "network": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg"
+    ],
+    "non": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "non-profit": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "open": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "org": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "platform": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "profit": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "project": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "publishes": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "real": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "real-time": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "reference": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "secure": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "source": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "standard": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "time": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "vibrant": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "web": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ]
+  }
+}

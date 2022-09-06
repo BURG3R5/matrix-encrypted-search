@@ -1,0 +1,879 @@
+{
+  "events": [
+    [
+      {
+        "event_id": "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+        "type": "m.room.message",
+        "content": {
+          "body": "Matrix is an open network for secure, decentralized communication"
+        }
+      },
+      {
+        "event_id": "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+        "type": "m.room.message",
+        "content": {
+          "body": "Matrix is an open source project that publishes the Matrix open standard for secure, decentralised, real-time communication, and its Apache licensed reference implementations."
+        }
+      },
+      {
+        "event_id": "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+        "type": "m.room.message",
+        "content": {
+          "body": "Maintained by the non-profit Matrix.org Foundation, we aim to create an open platform which is as independent, vibrant and evolving as the Web itself... but for communication."
+        }
+      }
+    ],
+    [
+      {
+        "event_id": "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+        "type": "m.room.message",
+        "content": {
+          "body": "Matrix defines a set of open APIs for decentralised communication, suitable for securely publishing, persisting and subscribing to data over a global open federation of servers with no single point of control. Uses include Instant Messaging (IM), Voice over IP (VoIP) signalling, Internet of Things (IoT) communication, and bridging together existing communication silos - providing the basis of a new open real-time communication ecosystem."
+        }
+      },
+      {
+        "event_id": "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+        "type": "m.room.message",
+        "content": {
+          "body": "The specification consists of the following parts: * Client-Server API * Server-Server API * Application Service API * Identity Service API * Push Gateway API * Room Versions * Appendices  *  Additionally, this introduction page contains the key baseline information required to understand the specific APIs, including the section the overall architecture.  *  The Matrix Client-Server API Swagger Viewer is useful for browsing the Client-Server API."
+        }
+      },
+      {
+        "event_id": "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+        "type": "m.room.message",
+        "content": {
+          "body": "The principles that Matrix attempts to follow are: * Pragmatic Web-friendly APIs (i.e. JSON over REST) * Keep It Simple & Stupid ** provide a simple architecture with minimal third-party dependencies. * Fully open: ** Fully open federation - anyone should be able to participate in the global Matrix network ** Fully open standard - publicly documented standard with no IP or patent licensing encumbrances ** Fully open source reference implementation - liberally-licensed example implementations with no IP or patent licensing encumbrances * Empowering the end-user ** The user should be able to choose the server and clients they use ** The user should be able to control how private their communication is ** The user should know precisely where their data is stored * Fully decentralised - no single points of control over conversations or the network as a whole * Learning from history to avoid repeating it ** Trying to take the best aspects of XMPP, SIP, IRC, SMTP, IMAP and NNTP whilst trying to avoid their failings"
+        }
+      },
+      {
+        "event_id": "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+        "type": "m.room.message",
+        "content": {
+          "body": "The functionality that Matrix provides includes: * Creation and management of fully distributed chat rooms with no single points of control or failure * Eventually-consistent cryptographically secure synchronisation of room state across a global open network of federated servers and services * Sending and receiving extensible messages in a room with (optional) end-to-end encryption * Extensible user management (inviting, joining, leaving, kicking, banning) mediated by a power-level based user privilege system. * Extensible room state management (room naming, aliasing, topics, bans) * Extensible user profile management (avatars, display names, etc) * Managing user accounts (registration, login, logout) * Use of 3rd Party IDs (3PIDs) such as email addresses, phone numbers, Facebook accounts to authenticate, identify and discover users on Matrix. * Trusted federation of identity servers for: ** Publishing user public keys for PKI ** Mapping of 3PIDs to Matrix IDs"
+        }
+      },
+      {
+        "event_id": "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+        "type": "m.room.message",
+        "content": {
+          "body": "The end goal of Matrix is to be a ubiquitous messaging layer for synchronising arbitrary data between sets of people, devices and services - be that for instant messages, VoIP call setups, or any other objects that need to be reliably and persistently pushed from A to B in an interoperable and federated manner."
+        }
+      }
+    ]
+  ],
+  "search_results": {
+    "3pids": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "3rd": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "able": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "accounts": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "across": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "additionally": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "addresses": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "aim": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "aliasing": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "anyone": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apache": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "api": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "apis": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "appendices": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "application": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "arbitrary": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "architecture": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "aspects": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "attempts": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "authenticate": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "avatars": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "avoid": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "b": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "banning": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "bans": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "based": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "baseline": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "basis": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "best": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "bridging": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "browsing": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "call": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "chat": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "choose": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "client": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "client-server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "clients": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "communication": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "consistent": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "consists": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "contains": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "conversations": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "create": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "creation": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "cryptographically": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "data": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralised": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralized": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg"
+    ],
+    "defines": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "dependencies": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "devices": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "discover": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "display": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "distributed": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "documented": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "e": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "ecosystem": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "email": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "empowering": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "encryption": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "encumbrances": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "end": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end-to-end": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end-user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "etc": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "eventually": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "eventually-consistent": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "evolving": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "example": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "existing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "extensible": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "facebook": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "failings": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "failure": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "follow": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "following": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "foundation": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "friendly": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "functionality": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "gateway": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "goal": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "history": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "i.e": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "identify": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "identity": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "ids": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "im": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "imap": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "implementation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "implementations": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "include": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "includes": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "including": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "independent": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "information": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "instant": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "internet": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "interoperable": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "introduction": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "inviting": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "iot": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "irc": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "joining": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "json": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "keep": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "key": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "keys": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "kicking": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "know": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "layer": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "learning": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "leaving": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "level": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "liberally": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "liberally-licensed": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "licensed": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "licensing": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "login": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "logout": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "maintained": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "management": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "managing": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "manner": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "mapping": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "matrix.org": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "mediated": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "messages": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "messaging": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "minimal": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "names": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "naming": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "need": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "new": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "nntp": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "non": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "non-profit": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "numbers": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "objects": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "open": [
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "optional": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "org": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "overall": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "page": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "participate": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "parts": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "patent": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "people": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "persistently": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "persisting": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "phone": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "pki": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "platform": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "point": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "power": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "power-level": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "pragmatic": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "precisely": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "principles": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "private": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "privilege": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "profile": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "profit": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "project": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "provide": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "provides": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "providing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "public": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "publicly": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "publishes": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc"
+    ],
+    "publishing": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "push": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "pushed": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "real": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "real-time": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "receiving": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "reference": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "registration": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "reliably": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "repeating": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "required": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "rest": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "room": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "rooms": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "section": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "secure": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$e4uSpA_hBkUvFNWSlOnGZGpuPbsiUS-GjNbIQrCHGHg",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "securely": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "sending": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "server-server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "servers": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "service": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "set": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "sets": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "setups": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "signalling": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "silos": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "simple": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "sip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "smtp": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "source": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "specific": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "specification": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "standard": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "state": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "stored": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "stupid": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "subscribing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "suitable": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "swagger": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "synchronisation": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "synchronising": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "system": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "take": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "things": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "third": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "third-party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "time": [
+      "$t_Hy7TIsezEcY6qhU3uHvxbpjvpoXeZ6zhlAZqgHnNc",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "together": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "topics": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "trusted": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "trying": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "ubiquitous": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "understand": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "useful": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "users": [
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "uses": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "versions": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "vibrant": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA"
+    ],
+    "viewer": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k"
+    ],
+    "voice": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "voip": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "web": [
+      "$iogVsYpUYJHyl1mApDviweI0_eW-RtsLZgf8eYFLMqA",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "web-friendly": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "whilst": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "whole": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "xmpp": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ]
+  }
+}
