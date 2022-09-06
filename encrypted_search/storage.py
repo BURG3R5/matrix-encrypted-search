@@ -37,6 +37,7 @@ class IndexStorage:
         >>> for file_data, callback in storage:
         >>>     mxc_uri = your_upload_method(file_data)
         >>>     callback(mxc_uri)
+        >>> storage.update_lookup_table()
         >>> updated_lookup_table = storage.lookup_table
     """
 
@@ -71,7 +72,6 @@ class IndexStorage:
             A tuple of the form (F, CB), where — F is the next file and CB is a callback function to update after
         """
         if not self.__remaining_files:
-            self.__update_lookup_table()
             raise StopIteration
 
         identifier, data = self.__remaining_files.popitem()
@@ -197,11 +197,8 @@ class IndexStorage:
 
         return files
 
-    def __update_lookup_table(self):
-        """Updates lookup table of encrypted index with new, remote locations.
-
-        Called by `__next__` when iteration ends and all files are uploaded.
-        """
+    def update_lookup_table(self):
+        """Updates lookup table of encrypted index with new, remote locations."""
         new_lookup_table: LookupTable = {
             keyword: []
             for keyword in self.lookup_table
