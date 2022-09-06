@@ -1,5 +1,5 @@
 from random import random
-from typing import Any, Dict
+from typing import Any, Dict, Iterable
 
 
 class MockHomeserver:
@@ -14,3 +14,7 @@ class MockHomeserver:
 
     def fetch(self, uri: str) -> Any:
         return self.files[uri]
+
+    def delete_all(self, uris_to_delete: Iterable[str]):
+        for uri in uris_to_delete:
+            del self.files[uri]
