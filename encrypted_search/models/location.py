@@ -112,3 +112,9 @@ class Location:
             self.chunk_length,
         )
         return hash(t)
+
+    def __repr__(self):
+        if self.is_remote:
+            return f"({self.mxc_uri}, {self.bucket_index if hasattr(self, 'bucket_index') else None}, {self.start_of_chunk}, {self.chunk_length})"
+        else:
+            return f"({self.level_index}, {self.bucket_index}, {self.start_of_chunk}, {self.chunk_length})"
