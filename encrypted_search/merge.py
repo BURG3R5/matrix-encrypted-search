@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import Callable, Dict, List, Set, Tuple
+from typing import Callable, Dict, Iterable, List, Set, Tuple
 
 from encrypted_search.index import EncryptedIndex
 from encrypted_search.models.location import Location
@@ -23,6 +23,7 @@ class IndexMerge:
         >>>     for mxc_uri in mxc_uris:
         >>>         file_data = your_fetch_method(mxc_uri)
         >>>         callback(mxc_uri, file_data)
+        >>> index_merger.distribute_new_index()
         >>> merged_encrypted_index = index_merger.encrypted_index
     """
 
@@ -30,10 +31,10 @@ class IndexMerge:
 
     __inverted_index: InvertedIndex
     __keywords: Set[str]
-    __lookup_tables: Tuple[LookupTable, ...]
+    __lookup_tables: Iterable[LookupTable]
     __remaining_keywords: Set[str]
 
-    def __init__(self, lookup_tables: Tuple[LookupTable, ...], **kwargs):
+    def __init__(self, lookup_tables: Iterable[LookupTable], **kwargs):
         self.__lookup_tables = lookup_tables
 
         # Extract a common set of keywords
@@ -54,7 +55,6 @@ class IndexMerge:
         """
 
         if not self.__remaining_keywords:
-            self.__distribute_index()
             raise StopIteration
 
         # Choose a random keyword
@@ -109,11 +109,8 @@ class IndexMerge:
         self.__remaining_keywords = self.__keywords.copy()
         return self
 
-    def __distribute_index(self):
-        """Converts merged inverted index into encrypted index.
-
-        Called by `__next__` when iteration ends and all docs are merged.
-        """
+    def distribute_new_index(self):
+        """Converts merged inverted index into encrypted index."""
 
         self.encrypted_index._EncryptedIndex__levels = self.encrypted_index.calc_params(
             self.__inverted_index)

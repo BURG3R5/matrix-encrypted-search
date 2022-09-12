@@ -1,4 +1,4 @@
-from typing import Dict, List, Set, Tuple, cast
+from typing import Dict, Iterable, List, Set, Tuple, cast
 
 from .models.location import Location
 from .types import Bucket, FetchedFiles, Level, LookupTable
@@ -25,9 +25,9 @@ class EncryptedSearch:
     """
 
     __locations: Dict[str, List[Location]]
-    __lookup_tables: Tuple[LookupTable]
+    __lookup_tables: Iterable[LookupTable]
 
-    def __init__(self, lookup_tables: Tuple[LookupTable, ...]):
+    def __init__(self, lookup_tables: Iterable[LookupTable]):
         self.__lookup_tables = lookup_tables
 
     def lookup(self, query: str) -> Set[str]:

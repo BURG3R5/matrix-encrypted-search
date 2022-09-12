@@ -37,6 +37,7 @@ class IndexStorage:
         >>> for file_data, callback in storage:
         >>>     mxc_uri = your_upload_method(file_data)
         >>>     callback(mxc_uri)
+        >>> storage.update_lookup_table()
         >>> updated_lookup_table = storage.lookup_table
     """
 
@@ -71,7 +72,6 @@ class IndexStorage:
             A tuple of the form (F, CB), where — F is the next file and CB is a callback function to update after
         """
         if not self.__remaining_files:
-            self.__update_lookup_table()
             raise StopIteration
 
         identifier, data = self.__remaining_files.popitem()
@@ -197,11 +197,8 @@ class IndexStorage:
 
         return files
 
-    def __update_lookup_table(self):
-        """Updates lookup table of encrypted index with new, remote locations.
-
-        Called by `__next__` when iteration ends and all files are uploaded.
-        """
+    def update_lookup_table(self):
+        """Updates lookup table of encrypted index with new, remote locations."""
         new_lookup_table: LookupTable = {
             keyword: []
             for keyword in self.lookup_table
@@ -262,22 +259,30 @@ class IndexStorage:
         elif is_stored_as_fraction_of_bucket(l, b):
             # Find all fractions of that bucket
             starts_of_files = find_fraction_of_bucket_file(l, b)
-            first_fraction = next(
-                i for i in range(len(starts_of_files) - 1)
-                if s in range(starts_of_files[i], starts_of_files[i + 1]))
-            last_fraction = next((f for f in starts_of_files if f >= s + c),
-                                 starts_of_files[-1])
-            starts_of_files = starts_of_files[first_fraction:last_fraction]
+            if s >= starts_of_files[-1]:
+                starts_of_files = [starts_of_files[-1]]
+            else:
+                first_fraction = next(
+                    (i for i in range(len(starts_of_files) - 1)
+                     if starts_of_files[i] <= s < starts_of_files[i + 1]),
+                    starts_of_files[-1],
+                )
+                last_fraction = next(
+                    (i for i, f in enumerate(starts_of_files) if f >= s + c),
+                    starts_of_files[-1],
+                )
+                starts_of_files = starts_of_files[first_fraction:last_fraction]
 
             # Modify relevant locations of fractions.
             locations: List[Location] = []
             for start_of_file in starts_of_files:
+                length_covered_so_far = max(start_of_file - s, 0)
                 locations.append(
                     Location(
                         is_remote=True,
                         mxc_uri=self.__mxc_uris_map[l, b, start_of_file],
                         start_of_chunk=max(s - start_of_file, 0),
-                        chunk_length=c,
+                        chunk_length=c - length_covered_so_far,
                     ))
 
             return tuple(locations)
