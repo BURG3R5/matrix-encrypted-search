@@ -14,13 +14,55 @@ class IntegrationTest(unittest.TestCase):
     def setUp(self) -> None:
         self.homeserver = MockHomeserver()
 
-    def test_single_index(self):
+    def test_single_index_keyword(self):
         cases = (
             "small",  # Small index
             "large",  # Relatively large index
         )
         for case in cases:
-            raw_test_data = get_test_data("integration/single", case)
+            raw_test_data = get_test_data("integration/single/keyword", case)
+            events = raw_test_data["events"]
+            expected_search_results = raw_test_data["search_results"]
+
+            # Create the basic structurally encrypted index
+            encrypted_index = EncryptedIndex(events)
+
+            # Prepare the index for upload
+            upload_ready_index = IndexStorage(encrypted_index, 100)
+            # Upload each file and save the generated uri in the lookup table
+            for file_data, callback in upload_ready_index:
+                mxc_uri = self.homeserver.upload(file_data)
+                callback(mxc_uri)
+            # Update the lookup table
+            upload_ready_index.update_lookup_table()
+            lookup_table = upload_ready_index.lookup_table
+
+            # Cleanup
+            del encrypted_index, upload_ready_index
+
+            # Search and assert
+            index_search = EncryptedSearch((lookup_table, ))
+            for query, expected_result in expected_search_results.items():
+                mxc_uris = index_search.lookup(query)
+                fetched_files = {
+                    mxc_uri: self.homeserver.fetch(mxc_uri)
+                    for mxc_uri in mxc_uris
+                }
+                search_result = index_search.locate(fetched_files)
+
+                self.assertEqual(
+                    set(expected_result),
+                    search_result,
+                    f"Search results for '{query}' failed for test case {case}.",
+                )
+
+    def test_single_index_phrase(self):
+        cases = (
+            "small",  # Small index
+            "large",  # Relatively large index
+        )
+        for case in cases:
+            raw_test_data = get_test_data("integration/single/phrase", case)
             events = raw_test_data["events"]
             expected_search_results = raw_test_data["search_results"]
 

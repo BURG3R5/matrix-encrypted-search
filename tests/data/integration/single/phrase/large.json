@@ -1,0 +1,1739 @@
+{
+  "events": [
+    {
+      "event_id": "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "type": "m.room.message",
+      "content": {
+        "body": "Matrix defines a set of open APIs for decentralised communication, suitable for securely publishing, persisting and subscribing to data over a global open federation of servers with no single point of control. Uses include Instant Messaging (IM), Voice over IP (VoIP) signalling, Internet of Things (IoT) communication, and bridging together existing communication silos - providing the basis of a new open real-time communication ecosystem."
+      }
+    },
+    {
+      "event_id": "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "type": "m.room.message",
+      "content": {
+        "body": "The specification consists of the following parts: * Client-Server API * Server-Server API * Application Service API * Identity Service API * Push Gateway API * Room Versions * Appendices  *  Additionally, this introduction page contains the key baseline information required to understand the specific APIs, including the section the overall architecture.  *  The Matrix Client-Server API Swagger Viewer is useful for browsing the Client-Server API."
+      }
+    },
+    {
+      "event_id": "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "type": "m.room.message",
+      "content": {
+        "body": "The principles that Matrix attempts to follow are: * Pragmatic Web-friendly APIs (i.e. JSON over REST) * Keep It Simple & Stupid ** provide a simple architecture with minimal third-party dependencies. * Fully open: ** Fully open federation - anyone should be able to participate in the global Matrix network ** Fully open standard - publicly documented standard with no IP or patent licensing encumbrances ** Fully open source reference implementation - liberally-licensed example implementations with no IP or patent licensing encumbrances * Empowering the end-user ** The user should be able to choose the server and clients they use ** The user should be able to control how private their communication is ** The user should know precisely where their data is stored * Fully decentralised - no single points of control over conversations or the network as a whole * Learning from history to avoid repeating it ** Trying to take the best aspects of XMPP, SIP, IRC, SMTP, IMAP and NNTP whilst trying to avoid their failings"
+      }
+    },
+    {
+      "event_id": "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q",
+      "type": "m.room.message",
+      "content": {
+        "body": "The functionality that Matrix provides includes: * Creation and management of fully distributed chat rooms with no single points of control or failure * Eventually-consistent cryptographically secure synchronisation of room state across a global open network of federated servers and services * Sending and receiving extensible messages in a room with (optional) end-to-end encryption * Extensible user management (inviting, joining, leaving, kicking, banning) mediated by a power-level based user privilege system. * Extensible room state management (room naming, aliasing, topics, bans) * Extensible user profile management (avatars, display names, etc) * Managing user accounts (registration, login, logout) * Use of 3rd Party IDs (3PIDs) such as email addresses, phone numbers, Facebook accounts to authenticate, identify and discover users on Matrix. * Trusted federation of identity servers for: ** Publishing user public keys for PKI ** Mapping of 3PIDs to Matrix IDs"
+      }
+    },
+    {
+      "event_id": "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "type": "m.room.message",
+      "content": {
+        "body": "The end goal of Matrix is to be a ubiquitous messaging layer for synchronising arbitrary data between sets of people, devices and services - be that for instant messages, VoIP call setups, or any other objects that need to be reliably and persistently pushed from A to B in an interoperable and federated manner."
+      }
+    }
+  ],
+  "search_results": {
+    "apis architecture": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis communication": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis data": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis decentralised": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis matrix": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "apis server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "architecture matrix": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "architecture server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "communication control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication data": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication decentralised": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "communication single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "control data": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "control decentralised": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "control end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "control matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control servers": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "control user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "data decentralised": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data end": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "data federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data instant": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data matrix": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data messaging": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "data voip": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralised federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralised global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralised ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralised matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralised open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "decentralised single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "end federated": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end matrix": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end messages": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "end user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated matrix": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated messages": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "federation matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation servers": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federation user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully global": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "fully user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global ip": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "global matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global servers": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "identity matrix": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "identity room": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "instant matrix": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "instant messaging": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "instant voip": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "ip matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "ip open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "ip single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "matrix messages": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix messaging": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "matrix network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix room": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "matrix servers": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix voip": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "messages services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "messaging voip": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE"
+    ],
+    "network open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "network party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "network points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "network single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "network use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "network user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "open party": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "open points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "open publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "open servers": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "open single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "open use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "open user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "points single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "points use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "points user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "publishing servers": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "publishing single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "single use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "single user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "use user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],"federated messages matrix": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated messages services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated messages end": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated matrix services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated matrix end": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "federated services end": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers global matrix": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers global control": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers global federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers global single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers global publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers global open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers matrix control": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers matrix federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers matrix single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers matrix publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers matrix open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers control federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers control single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers control publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers control open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers federation single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers federation publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers federation open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers single publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers single open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "servers publishing open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "messages matrix services": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "messages matrix end": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "messages services end": [
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "messaging matrix voip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "messaging matrix instant": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "messaging matrix data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "messaging voip instant": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "messaging voip data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "messaging instant data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$nhOCSjjWuY7ejys2UKCUpJ6co_euJeunxgyAPDX-kNo"
+    ],
+    "party global matrix": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party global end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party matrix end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party user end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party control end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party use end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party federation single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party federation network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party federation points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party federation open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party federation fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party federation end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party single network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party single points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party single open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party single fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party single end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party network points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party network open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party network fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party network end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party points open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party points fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party points end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party open fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party open end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "party fully end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global apis matrix": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis control": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global apis data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global matrix user": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix control": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global matrix ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global matrix network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global matrix points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global matrix data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global user control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global user end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global control ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global control network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global control points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global control data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global use federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global use single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global use network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global use points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global use open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global use fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global use end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global federation ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global federation network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global federation points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global federation data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global single publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global single communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global single ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global single network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global single decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global single points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global single open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global single fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global single end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global single data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global publishing open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global communication ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global communication decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global communication open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global communication data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global ip decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global ip open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global ip data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global network points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global network open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global network fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global network end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global decentralised open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global decentralised data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global points open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global points fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global points end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global open fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global open end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "global open data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "global fully end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "apis matrix control": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix architecture": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis matrix data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis control federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis control single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis control communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis control ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis control decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis control open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis control data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis federation single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis federation communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis federation ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis federation decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis federation open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis federation data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis architecture server": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis single communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis single ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis single decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis single open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis single data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis communication ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis communication decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis communication open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis communication data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis ip decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis ip open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis ip data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis decentralised open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis decentralised data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "apis open data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "matrix room identity": [
+      "$Y4oEne-XRb1DXPKo5n2ZJR0h76Q9tSIFC8DRuoDFt7k",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user control": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user federation": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user single": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user open": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix user end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control use": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control federation": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control single": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control publishing": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control communication": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "matrix control ip": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "matrix control network": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control decentralised": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ],
+    "matrix control points": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control open": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control fully": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control end": [
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA",
+      "$zZr7syVhyKdUJh9CnVgPHwNd31zmy_ljdffXZ3teR4Q"
+    ],
+    "matrix control data": [
+      "$sS6t_TRXJw6X3nKD3S0FjVCsi0wXVqrVRjGhZS82LiE",
+      "$bFr9a8KtEYezzdq_acYuIDxGCDEp-qbPpLLl2Rxz7SA"
+    ]
+  }
+}
