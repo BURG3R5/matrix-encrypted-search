@@ -57,7 +57,7 @@ class EncryptedSearchTest(unittest.TestCase):
                 expected_doc_ids = keyword_test_data["doc_ids"]
 
                 search = EncryptedSearch(())
-                search._EncryptedSearch__locations = locations
+                search._EncryptedSearch__locations = {keyword: locations}
                 doc_ids = search.locate(fetched_files)
 
                 self.assertEqual(set(expected_doc_ids), doc_ids)
