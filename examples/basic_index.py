@@ -11,14 +11,16 @@ from encrypted_search.types import Event, LookupTable
 
 HOMESERVER = "https://matrix.org"
 USER = "@burgers:matrix.org"
-PASSWORD = "this-is-my-real-password-please-dont-hack-my-account"
+PASSWORD = "this-is-my-real-password"  # Please don't misuse my extremely real password
 
-SOURCE_ROOM = "!vQWVXkEbAIxqvhOGmF:matrix.org"
-DESTINATION_ROOM = "!zzqwCHxHhBvTXwkRZm:matrix.org"
+SOURCE_ROOM = "!vQWVXkEbAIxqvhOGmF:matrix.org"  # Room to be indexed
+DESTINATION_ROOM = "!zzqwCHxHhBvTXwkRZm:matrix.org"  # Room to store index in
+N = 20  # Number of messages to index
 
 SEARCH_QUERIES = [
     "matrix",
     "encrypted",
+    "matrix media",
 ]
 
 
@@ -38,27 +40,25 @@ async def login() -> Tuple[AsyncClient, str]:
 async def fetch_n_messages(
     client: AsyncClient,
     token: str,
-    n: int,
 ) -> List[Event]:
-    """Fetches latest `n` "m.room.message" events from provided `SOURCE_ROOM`.
+    """Fetches latest `N` "m.room.message" events from provided `SOURCE_ROOM`.
 
     Args:
         client: Authenticated Nio client
         token: Post-sync token for client
-        n: Number of messages to fetch
 
     Returns:
-        List of `n` "m.room.message" events.
+        List of `N` "m.room.message" events.
     """
 
     messages = []
 
-    while len(messages) < n:
+    while len(messages) < N:
         # Fetch events, filtering out non-message events.
         response = await client.room_messages(
             SOURCE_ROOM,
             start=token,
-            limit=n,
+            limit=N,
             message_filter={
                 "types": [
                     "m.room.message",
@@ -83,7 +83,7 @@ async def fetch_n_messages(
         token = response.end
 
     # Delete extras
-    del messages[n:]
+    del messages[N:]
 
     return messages
 
@@ -224,7 +224,7 @@ async def main():
     """Calls the methods defined above to demonstrate an implementation of encrypted-search."""
 
     client, token = await login()
-    messages = await fetch_n_messages(client, token, 20)
+    messages = await fetch_n_messages(client, token)
     lookup_table = await create_and_upload_index(client, messages)
 
     index = EncryptedSearch((lookup_table, ))
