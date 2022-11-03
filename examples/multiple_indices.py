@@ -1,6 +1,6 @@
 import asyncio
 import json
-from typing import List, Set, Tuple
+from typing import Iterable, List, Set, Tuple
 
 from nio import AsyncClient, RoomMessagesError, RoomMessageText
 
@@ -219,39 +219,30 @@ async def display_results(
     print('\n' * 3)
 
 
-async def clear_destination_room(client: AsyncClient, token: str):
-    """Clears the latest messages from `DESTINATION_ROOM`.
+async def clear_destination_room(
+    client: AsyncClient,
+    lookup_tables: Iterable[LookupTable],
+):
+    """Clears messages from `DESTINATION_ROOM`.
 
     Args:
         client: Authenticated Nio client
-        token: Post-sync token for client
+        lookup_tables: Iterable of lookup tables to purge
     """
 
-    while True:
-        response = await client.room_messages(
+    events_to_delete = set()
+    for lookup_table in lookup_tables:
+        for locations in lookup_table.values():
+            for location in locations:
+                events_to_delete.add(location.mxc_uri)
+
+    for event_id in events_to_delete:
+        await client.room_redact(
             DESTINATION_ROOM,
-            start=token,
-            limit=100,
-            message_filter={
-                "types": [
-                    "m.room.message",
-                ],
-            },
+            event_id,
+            reason="Cleanup after example completion",
+            tx_id=event_id,
         )
-        if isinstance(response, RoomMessagesError):
-            print(response)
-            break
-        if response.end is None:
-            break
-        print(f"fetched {len(response.chunk)}")
-        for message in response.chunk:
-            await client.room_redact(
-                DESTINATION_ROOM,
-                message.event_id,
-                reason="Database cleanup",
-                tx_id=message.event_id,
-            )
-        token = response.end
 
 
 async def main():
@@ -267,7 +258,7 @@ async def main():
         results = await search_in_index(client, index, query)
         await display_results(client, query, results)
 
-    await clear_destination_room(client, token)
+    await clear_destination_room(client, (lookup_table_1, lookup_table_2))
 
     await client.close()
 
