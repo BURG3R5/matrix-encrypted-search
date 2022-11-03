@@ -17,7 +17,7 @@ SOURCE_ROOM = "!vQWVXkEbAIxqvhOGmF:matrix.org"  # Room to be indexed
 DESTINATION_ROOM = "!zzqwCHxHhBvTXwkRZm:matrix.org"  # Room to store index in
 N1 = 20  # Number of messages in first batch
 N2 = 20  # Number of messages in second batch
-DOCUMENT_SIZE = 5000
+DOCUMENT_SIZE = 5000  # Maximum size of each document in database
 
 SEARCH_QUERIES = [
     "matrix",

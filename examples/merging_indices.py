@@ -18,7 +18,7 @@ SOURCE_ROOM = "!vQWVXkEbAIxqvhOGmF:matrix.org"  # Room to be indexed
 DESTINATION_ROOM = "!zzqwCHxHhBvTXwkRZm:matrix.org"  # Room to store index in
 N1 = 20  # Number of messages in first batch
 N2 = 20  # Number of messages in second batch
-DOCUMENT_SIZE = 5000
+DOCUMENT_SIZE = 5000  # Maximum size of each document in database
 
 SEARCH_QUERIES = [
     "matrix",
@@ -250,6 +250,16 @@ async def merge_indices_and_upload(
     client: AsyncClient,
     lookup_tables: Tuple[LookupTable, ...],
 ) -> LookupTable:
+    """Merges multiple indices and uploads the merged index to `DESTINATION_ROOM`.
+
+    Args:
+        client: Authenticated Nio client
+        lookup_tables: Iterable of lookup tables to merge
+
+    Returns:
+        Lookup table of merged index.
+    """
+
     index_merger = IndexMerge(lookup_tables)
     events_to_delete = set()
     for event_ids, callback in index_merger:

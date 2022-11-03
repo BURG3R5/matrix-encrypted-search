@@ -16,7 +16,7 @@ PASSWORD = "this-is-my-real-password"  # Please don't misuse my extremely real p
 SOURCE_ROOM = "!vQWVXkEbAIxqvhOGmF:matrix.org"  # Room to be indexed
 DESTINATION_ROOM = "!zzqwCHxHhBvTXwkRZm:matrix.org"  # Room to store index in
 N = 20  # Number of messages to index
-DOCUMENT_SIZE = 5000
+DOCUMENT_SIZE = 5000  # Maximum size of each document in database
 
 SEARCH_QUERIES = [
     "matrix",
