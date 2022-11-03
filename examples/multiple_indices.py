@@ -5,7 +5,6 @@ from typing import List, Set, Tuple
 from nio import AsyncClient, RoomMessagesError, RoomMessageText
 
 from encrypted_search.index import EncryptedIndex
-from encrypted_search.merge import IndexMerge
 from encrypted_search.search import EncryptedSearch
 from encrypted_search.storage import IndexStorage
 from encrypted_search.types import Event, LookupTable
@@ -255,49 +254,6 @@ async def clear_destination_room(client: AsyncClient, token: str):
         token = response.end
 
 
-async def merge_indices_and_upload(
-    client: AsyncClient,
-    lookup_tables: Tuple[LookupTable, ...],
-) -> LookupTable:
-    index_merger = IndexMerge(lookup_tables)
-    events_to_delete = set()
-    for event_ids, callback in index_merger:
-        events_to_delete |= event_ids
-        for event_id in event_ids:
-            response = await client.room_get_event(DESTINATION_ROOM, event_id)
-            file_data = json.loads(response.event.source["content"]["body"])
-            callback(event_id, file_data)
-    index_merger.distribute_new_index()
-    merged_encrypted_index = index_merger.encrypted_index
-
-    # TODO: Delete previous files from homeserver
-    # self.homeserver.delete_all(uris_to_delete)
-
-    # Prepare the index for upload
-    upload_ready_index = IndexStorage(merged_encrypted_index, DOCUMENT_SIZE)
-
-    # Upload each file and save the generated uri in the lookup table
-    for file_data, callback in upload_ready_index:
-        response = await client.room_send(
-            room_id=DESTINATION_ROOM,
-            message_type="m.room.message",
-            content={
-                "msgtype": "m.text",
-                "body": json.dumps(file_data)
-            },
-        )
-        callback(response.event_id)
-
-    # Update the lookup table
-    upload_ready_index.update_lookup_table()
-    lookup_table = upload_ready_index.lookup_table
-
-    # Cleanup
-    del merged_encrypted_index, upload_ready_index, lookup_tables
-
-    return lookup_table
-
-
 async def main():
     """Calls the methods defined above to demonstrate an implementation of encrypted-search."""
 
@@ -306,11 +262,7 @@ async def main():
     lookup_table_1 = await create_and_upload_index(client, batch_1)
     lookup_table_2 = await create_and_upload_index(client, batch_2)
 
-    merged_lookup_table = await merge_indices_and_upload(
-        client, (lookup_table_1, lookup_table_2))
-    del lookup_table_1, lookup_table_2
-
-    index = EncryptedSearch((merged_lookup_table, ))
+    index = EncryptedSearch((lookup_table_1, lookup_table_2))
     for query in SEARCH_QUERIES:
         results = await search_in_index(client, index, query)
         await display_results(client, query, results)

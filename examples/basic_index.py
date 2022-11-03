@@ -16,6 +16,7 @@ PASSWORD = "this-is-my-real-password"  # Please don't misuse my extremely real p
 SOURCE_ROOM = "!vQWVXkEbAIxqvhOGmF:matrix.org"  # Room to be indexed
 DESTINATION_ROOM = "!zzqwCHxHhBvTXwkRZm:matrix.org"  # Room to store index in
 N = 20  # Number of messages to index
+DOCUMENT_SIZE = 5000
 
 SEARCH_QUERIES = [
     "matrix",
@@ -106,7 +107,7 @@ async def create_and_upload_index(
     encrypted_index = EncryptedIndex(messages)
 
     # Prepare the index for upload
-    upload_ready_index = IndexStorage(encrypted_index, 5000)
+    upload_ready_index = IndexStorage(encrypted_index, DOCUMENT_SIZE)
 
     # Upload each file and save the generated uri in the lookup table
     for file_data, callback in upload_ready_index:
