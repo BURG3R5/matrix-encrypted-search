@@ -1,3 +1,5 @@
+![README banner for matrix-encrypted-search](https://i.imgur.com/9T7h2sj.png)
+
 # Matrix Encrypted Search
 
 A Python library with methods to create, update and search on encrypted indices stored in content repositories in a Matrix homeserver.
